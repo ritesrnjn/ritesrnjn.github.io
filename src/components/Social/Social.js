@@ -1,5 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
+import { makeStyles } from '@material-ui/core/styles';
+import { social } from 'config';
 import {
   Twitter,
   GithubCircle,
@@ -9,10 +11,7 @@ import {
   Linkedin
 } from 'mdi-material-ui';
 
-import { withStyles } from '@material-ui/core/styles';
-import { social } from 'config';
-
-const styles = {
+const useStyles = makeStyles(theme => ({
   social: {
     margin: 30
   },
@@ -51,9 +50,10 @@ const styles = {
       color: '#0077B5'
     }
   }
-};
+}));
 
-function Social({ classes }) {
+function Social() {
+  const classes = useStyles();
   const getPageLink = page => {
     switch (page) {
       case 'twitter':
@@ -119,4 +119,4 @@ function Social({ classes }) {
   );
 }
 
-export default withStyles(styles)(Social);
+export default Social;
