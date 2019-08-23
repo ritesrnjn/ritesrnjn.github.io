@@ -1,7 +1,7 @@
 export default [
   {
     name: 'DOB',
-    value: '05/01/1993'
+    value: 'Jan 5th, 1993'
   },
   {
     name: 'Nationality',

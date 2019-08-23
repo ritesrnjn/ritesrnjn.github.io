@@ -9,6 +9,7 @@ import Container from '@material-ui/core/Container';
 import experience from '../../config/experience';
 import education from '../../config/education';
 import skills from '../../config/skills';
+import spare from '../../config/spare';
 import details from '../../config/personalDetails';
 
 // Sections
@@ -16,24 +17,29 @@ import Intro from './Intro';
 import Experience from './Experience';
 import Education from './Education';
 import Skills from './Skills';
+import Spare from './Spare';
 import PersonalDetails from './PersonalDetails';
 
 const useStyle = makeStyles(theme => ({
   root: {
-    marginTop: '5em'
+    marginTop: '5em',
+    marginBottom: '4em'
   },
-  intro: {
+  item: {
     marginBottom: '2em'
-  },
-  designation: {
-    paddingLeft: 4,
-    fontWeight: 300
-  },
-  personalInfo: {
-    fontWeight: 300,
-    textAlign: 'right'
   }
 }));
+
+function Item(props) {
+  const { title } = props;
+  return (
+    <Typography color="primary">
+      <Box fontSize={22} fontWeight="fontWeightLight">
+        {title}
+      </Box>
+    </Typography>
+  );
+}
 
 export default function Resume() {
   const classes = useStyle();
@@ -42,14 +48,9 @@ export default function Resume() {
     <Container maxWidth="lg" className={classes.root}>
       <Intro />
 
-      {/* Experience */}
-      <Grid container>
+      <Grid container className={classes.item}>
         <Grid item sm={3} lg={2}>
-          <Typography color="primary">
-            <Box fontSize={20} fontWeight="fontWeightLight">
-              Experience
-            </Box>
-          </Typography>
+          <Item title="Experience" />
         </Grid>
         <Grid item sm={9} lg={10}>
           {experience.map(exp => (
@@ -59,13 +60,9 @@ export default function Resume() {
       </Grid>
 
       {/* Education */}
-      <Grid container>
+      <Grid container className={classes.item}>
         <Grid item sm={3} lg={2}>
-          <Typography color="primary">
-            <Box fontSize={20} fontWeight="fontWeightLight">
-              Education
-            </Box>
-          </Typography>
+          <Item title="Education" />
         </Grid>
         <Grid item sm={9} lg={10}>
           {education.map(edu => (
@@ -74,35 +71,29 @@ export default function Resume() {
         </Grid>
       </Grid>
 
-      <Grid container>
+      <Grid container className={classes.item}>
         <Grid item sm={3} lg={2}>
-          <Typography color="primary">
-            <Box fontSize={20} fontWeight="fontWeightLight">
-              Skills
-            </Box>
-          </Typography>
+          <Item title="Skills" />
         </Grid>
         <Grid item sm={9} lg={10}>
           <Skills skills={skills} />
         </Grid>
       </Grid>
 
-      <Grid container>
+      <Grid container className={classes.item}>
         <Grid item sm={3} lg={2}>
-          <Typography variant="subtitle1" color="primary">
-            Spare
-          </Typography>
+          <Item title="Spare Time" />
         </Grid>
-        <Grid item sm={9} lg={10}></Grid>
+        <Grid item sm={9} lg={10}>
+          {spare.map(spare => (
+            <Spare spare={spare} />
+          ))}
+        </Grid>
       </Grid>
 
-      <Grid container>
+      <Grid container className={classes.item}>
         <Grid item sm={3} lg={2}>
-          <Typography color="primary">
-            <Box fontSize={20} fontWeight="fontWeightLight">
-              Personal Details
-            </Box>
-          </Typography>
+          <Item title="Personal Details" />
         </Grid>
         <Grid item sm={9} lg={10}>
           <PersonalDetails details={details} />
