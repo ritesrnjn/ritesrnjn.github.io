@@ -1,6 +1,7 @@
 const styles = {
   '@global': {
     body: {
+      fontFamily: 'Roboto',
       backgroundColor: '#ffffff',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',

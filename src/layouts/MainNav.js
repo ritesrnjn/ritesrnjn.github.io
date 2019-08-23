@@ -1,15 +1,15 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import { NavLink } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     borderTop: '3px solid #27A822'
   },
-  menuButton: {
+  menuItem: {
     marginLeft: theme.spacing(2),
     textDecoration: 'none',
     color: '#636363'
@@ -35,11 +35,11 @@ export default function MainNav() {
     <div className={classes.root}>
       <AppBar position="static" color="secondary" className={classes.appBar}>
         <Toolbar>
-          <div style={{ flex: 1 }}></div>
+          <div style={{ flex: 1 }} />
           <NavLink
             exact
             to="/"
-            className={classes.menuButton}
+            className={classes.menuItem}
             activeClassName={classes.active}
           >
             Home
@@ -47,7 +47,7 @@ export default function MainNav() {
           <NavLink
             exact
             to="/projects"
-            className={classes.menuButton}
+            className={classes.menuItem}
             activeClassName={classes.active}
           >
             Projects
@@ -55,7 +55,7 @@ export default function MainNav() {
           <NavLink
             exact
             to="/resume"
-            className={classes.menuButton}
+            className={classes.menuItem}
             activeClassName={classes.active}
           >
             Resume

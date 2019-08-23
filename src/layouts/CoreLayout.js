@@ -5,13 +5,12 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
 // Components
-import MainNav from 'layouts/MainNav';
-import RedirectAs404 from 'pages/NoMatch/RedirectAs404';
+import MainNav from '../layouts/MainNav';
+import RedirectAs404 from '../pages/NoMatch/RedirectAs404';
 import globalStyles from '../styles/global';
 
-import Home from 'pages/Home';
-import Projects from 'pages/Projects';
-import Resume from 'pages/Resume';
+import Home from '../pages/Home';
+import Projects from '../pages/Projects';
 
 const useStyles = makeStyles(theme => ({
   ...globalStyles,
@@ -39,7 +38,6 @@ export default function CoreLayout() {
           <Switch>
             <Route exact path={'/'} component={Home} />
             <Route path={'/projects'} component={Projects} />
-            <Route path={'/resume'} component={Resume} />
             <Route component={RedirectAs404} />
           </Switch>
         </Grid>
