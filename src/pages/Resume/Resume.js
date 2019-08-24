@@ -24,11 +24,12 @@ import PersonalDetails from './PersonalDetails';
 const useStyle = makeStyles(theme => ({
   root: {
     marginTop: '3em',
-    marginBottom: '4em'
+    marginBottom: '2em'
   },
   item: {
     marginTop: '2em'
-  }
+  },
+  footer: { marginTop: '2em', color: '#a2a2a2' }
 }));
 
 function Item(props) {
@@ -101,6 +102,18 @@ export default function Resume() {
           <PersonalDetails details={details} />
         </Grid>
       </Grid>
+
+      <Divider style={{ marginTop: '2em' }} />
+
+      <Typography component="div" align="center">
+        <Box
+          fontSize={16}
+          fontWeight="fontWeightLight"
+          className={classes.footer}
+        >
+          last update: August 2019
+        </Box>
+      </Typography>
     </Container>
   );
 }

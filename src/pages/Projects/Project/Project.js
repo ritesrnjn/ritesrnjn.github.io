@@ -1,62 +1,83 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Chip from '@material-ui/core/Chip';
 import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
+import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    marginBottom: '2em'
+    marginTop: '4em',
+    marginBottom: '4em'
+  },
+  techStack: {
+    marginTop: 10
   },
   chip: {
-    margin: theme.spacing(1)
+    display: 'inline',
+    background: theme.palette.primary.main,
+    color: '#fff',
+    margin: 2,
+    padding: '3px 6px',
+    fontSize: 14,
+    fontWeight: 300,
+    borderRadius: 2
   }
 }));
 
 export default function Project(props) {
   const { details } = props;
   const classes = useStyles();
+
   return (
-    <div className={classes.root}>
-      <Typography component="div">
-        <Box
-          fontSize={20}
-          fontWeight="fontWeightBold"
-          color="primary.main"
-          display="inline"
-        >
-          {details.name}
-        </Box>
-        <Box fontSize={20} fontWeight="fontWeightLight">
-          {details.description}
-        </Box>
-      </Typography>
-
-      {details.homepageUrl && (
-        <div>
-          <a href={details.homepage}> view homepage</a>
-        </div>
-      )}
-
-      {details.repoUrl && (
-        <div>
-          <a href={details.repoUrl}> view repo </a>
-        </div>
-      )}
-
-      {details.techStack.length > 0 && (
-        <div>
-          <Typography variant="body1">Tech Stack</Typography>
-          {details.techStack.map(t => (
-            <Chip
-              variant="outlined"
-              color="primary"
-              label={t}
-              className={classes.chip}
+    <div>
+      <div className={classes.root}>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <Typography component="div" align="center">
+              <Box fontSize={28} fontWeight="400">
+                {details.name}
+              </Box>
+            </Typography>
+          </Grid>
+          <Grid item md={6}>
+            <img
+              src={process.env.PUBLIC_URL + '/projects/mojojo.png'}
+              alt="mojojo"
+              style={{ maxWidth: '100%' }}
             />
-          ))}
-        </div>
-      )}
+          </Grid>
+          <Grid item md={6}>
+            <Typography component="div">
+              <Box fontSize={15} fontWeight="fontWeightLight">
+                {details.description}
+              </Box>
+            </Typography>
+
+            {details.homepageUrl && (
+              <div>
+                <a href={details.homepage}> view homepage</a>
+              </div>
+            )}
+
+            {details.repoUrl && (
+              <div>
+                <a href={details.repoUrl}> view repo </a>
+              </div>
+            )}
+
+            {details.techStack.length > 0 && (
+              <div className={classes.techStack}>
+                <Typography variant="body1">Tech Stack</Typography>
+                {details.techStack.map(t => (
+                  <div className={classes.chip}>{t}</div>
+                ))}
+              </div>
+            )}
+          </Grid>
+        </Grid>
+      </div>
+      <Divider variant="middle" />
     </div>
   );
 }

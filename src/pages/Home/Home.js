@@ -1,10 +1,10 @@
-import Grid from '@material-ui/core/Grid';
-import Avatar from '@material-ui/core/Avatar';
-import myPic from '../../assets/img/me.jpg';
-import Typography from '@material-ui/core/Typography';
-import Social from '../../components/Social';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Avatar from '@material-ui/core/Avatar';
+import Typography from '@material-ui/core/Typography';
+import myPic from '../../assets/img/me.jpg';
+import Social from '../../components/Social';
 
 const useStyle = makeStyles(theme => ({
   bigAvatar: {
