@@ -25,5 +25,9 @@ export default [
       'Windows Phone SDK',
       'Visual Studio'
     ]
+  },
+  {
+    title: 'Hobbies',
+    desc: 'Sketching, Music, Electronics'
   }
 ];

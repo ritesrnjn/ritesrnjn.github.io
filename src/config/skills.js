@@ -2,7 +2,7 @@ export default {
   languages: {
     title: 'Languages',
     advanced: ['JavaScript, PHP, Python'],
-    intermediate: ['C#'],
+    intermediate: ['C#', 'C++'],
     beginner: ['Go']
   },
   web: {
@@ -17,15 +17,7 @@ export default {
     title: 'Other',
     tech: [
       ['GIT', 'JIRA', 'Gulp', 'Webpack', 'Balsamiq', 'Photoshop'],
-      [
-        'VSCode',
-        'Atom',
-        'Notepad++',
-        'Visual Studio',
-        'WebStorm',
-        'PhpStorm',
-        'PyCharm'
-      ]
+      ['VSCode', 'Atom', 'Notepad++', 'Visual Studio', 'IntelliJ IDEs']
     ]
   }
 };
