@@ -3,8 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
-import ItemList from '../../components/ItemList';
-
 const useStyle = makeStyles(theme => ({
   section: {
     marginBottom: '1em'
@@ -23,13 +21,13 @@ export default function Spare(props) {
         <Box fontSize={20} fontWeight="fontWeightLight">
           {spare.title}
         </Box>
-        <Box fontSize={17} fontWeight="fontWeightLight">
+        <Box fontSize={15} fontWeight="fontWeightLight">
           {spare.desc}
         </Box>
 
         <div className={classes.details}>
           {spare.repo && (
-            <Box fontSize={17} fontWeight="fontWeightLight">
+            <Box fontSize={15} fontWeight="fontWeightLight">
               Git: {spare.repo}
             </Box>
           )}
@@ -37,12 +35,8 @@ export default function Spare(props) {
 
         <div className={classes.details}>
           {spare.stack && (
-            <Box fontSize={16} fontWeight="fontWeightLight">
-              <div>
-                {spare.stack.map((item, i) => (
-                  <ItemList index={i} items={spare.stack} />
-                ))}
-              </div>
+            <Box fontSize={15} fontWeight="fontWeightLight">
+              {spare.stack.join(' – ')}
             </Box>
           )}
         </div>

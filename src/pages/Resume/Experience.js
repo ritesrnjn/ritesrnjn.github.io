@@ -30,7 +30,7 @@ export default function Experience(props) {
           <Box fontSize={20} fontWeight="fontWeightLight">
             {p.title}
           </Box>
-          <Box fontSize={17} fontWeight="fontWeightLight">
+          <Box fontSize={15} fontWeight="fontWeightLight">
             {p.description}
           </Box>
         </Typography>

@@ -4,6 +4,7 @@ import Box from '@material-ui/core/Box';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import Divider from '@material-ui/core/Divider';
 
 // data
 import experience from '../../config/experience';
@@ -22,11 +23,11 @@ import PersonalDetails from './PersonalDetails';
 
 const useStyle = makeStyles(theme => ({
   root: {
-    marginTop: '5em',
+    marginTop: '3em',
     marginBottom: '4em'
   },
   item: {
-    marginBottom: '2em'
+    marginTop: '2em'
   }
 }));
 
@@ -45,8 +46,9 @@ export default function Resume() {
   const classes = useStyle();
 
   return (
-    <Container maxWidth="lg" className={classes.root}>
+    <Container maxWidth="md" className={classes.root}>
       <Intro />
+      <Divider />
 
       <Grid container className={classes.item}>
         <Grid item sm={3} lg={2}>

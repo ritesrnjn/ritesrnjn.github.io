@@ -4,7 +4,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import RatingStars from './RatingStars';
-import ItemList from '../../components/ItemList';
 
 const useStyle = makeStyles(theme => ({
   section: {
@@ -35,7 +34,7 @@ export default function Skills(props) {
           <div className={classes.rating}>
             <RatingStars stars={4} /> &nbsp;&nbsp;
             <Box fontSize={17} fontWeight="fontWeightLight" display="inline">
-              {skills.languages.advanced.map(l => l)}
+              {skills.languages.advanced.join(', ')}
             </Box>
           </div>
 
@@ -43,14 +42,14 @@ export default function Skills(props) {
             <RatingStars stars={3.5} />
             &nbsp;&nbsp;
             <Box fontSize={17} fontWeight="fontWeightLight" display="inline">
-              {skills.languages.intermediate.map(l => l)}
+              {skills.languages.intermediate.join(', ')}
             </Box>
           </div>
 
           <div className={classes.rating}>
             <RatingStars stars={2} /> &nbsp;&nbsp;
             <Box fontSize={17} fontWeight="fontWeightLight" display="inline">
-              {skills.languages.beginner.map(l => l)}
+              {skills.languages.beginner.join(', ')}
             </Box>
           </div>
         </Typography>
@@ -63,9 +62,9 @@ export default function Skills(props) {
           </Box>
           {skills.web.tech.map(t => (
             <div>
-              {t.map((item, i) => (
-                <ItemList index={i} items={t} />
-              ))}
+              <Box fontSize={17} fontWeight="fontWeightLight" display="inline">
+                {t.join(' – ')}
+              </Box>
             </div>
           ))}
         </Typography>
@@ -78,9 +77,9 @@ export default function Skills(props) {
           </Box>
           {skills.other.tech.map(t => (
             <div>
-              {t.map((item, i) => (
-                <ItemList index={i} items={t} />
-              ))}
+              <Box fontSize={17} fontWeight="fontWeightLight" display="inline">
+                {t.join(' – ')}
+              </Box>
             </div>
           ))}
         </Typography>

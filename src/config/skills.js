@@ -1,7 +1,7 @@
 export default {
   languages: {
     title: 'Languages',
-    advanced: ['JavaScript, PHP, Python'],
+    advanced: ['JavaScript', 'PHP', 'Python'],
     intermediate: ['C#', 'C++'],
     beginner: ['Go']
   },

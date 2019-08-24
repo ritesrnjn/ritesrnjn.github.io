@@ -2,32 +2,35 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    marginBottom: '2em'
+  },
   chip: {
     margin: theme.spacing(1)
   }
 }));
 
-/*
-
-{
-      id: 'malvern',
-      name: 'Malvern',
-      description: 'iRelief Services Private Limited is an Aggregator for Healthcare Services. The company\'s Headquarters\' is located in Bangalore, Karnataka. iRelief provides innovative technology solution based services in the domain of healthcare ranging from ambulance, blood bank, homecare and pharmacy services.',
-      tech: ['Python', 'Django', 'Angular5'],
-      homepage: '',
-      repo: ''
-    }
- */
-
 export default function Project(props) {
   const { details } = props;
   const classes = useStyles();
   return (
-    <div>
-      <Typography variant="h5"> {details.name} </Typography>
-      <Typography variant="body1"> {details.description} </Typography>
+    <div className={classes.root}>
+      <Typography component="div">
+        <Box
+          fontSize={20}
+          fontWeight="fontWeightBold"
+          color="primary.main"
+          display="inline"
+        >
+          {details.name}
+        </Box>
+        <Box fontSize={20} fontWeight="fontWeightLight">
+          {details.description}
+        </Box>
+      </Typography>
 
       {details.homepageUrl && (
         <div>
@@ -54,7 +57,6 @@ export default function Project(props) {
           ))}
         </div>
       )}
-      <hr />
     </div>
   );
 }
