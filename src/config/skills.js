@@ -8,9 +8,10 @@ export default {
   web: {
     title: 'Web',
     tech: [
-      ['jQuery', 'AngularJS', 'Angular', 'Node.js', 'Express'],
-      ['HTML5', 'Pug', 'CSS3', 'Sass', 'Bootstrap', 'MaterializeCSS'],
-      ['Laravel 5', 'Wordpress 4', 'Django', 'MySql', 'Redis', 'SQLite']
+      ['Django', 'Celery', 'MySql', 'Redis', 'SQLite'],
+      ['jQuery', 'React', 'Redux', 'AngularJS', 'Angular', 'Node.js', 'Express'],
+      ['HTML5', 'Pug', 'CSS3', 'Sass', 'Bootstrap', 'JSS', 'MaterialUI'],
+      ['AWS', 'GCP', 'Laravel 5', 'Wordpress']
     ]
   },
   other: {

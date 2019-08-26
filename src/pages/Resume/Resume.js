@@ -52,10 +52,10 @@ export default function Resume() {
       <Divider />
 
       <Grid container className={classes.item}>
-        <Grid item sm={3} lg={2}>
+        <Grid item xs={12} md={2}>
           <Item title="Experience" />
         </Grid>
-        <Grid item sm={9} lg={10}>
+        <Grid item xs={12} md={10}>
           {experience.map(exp => (
             <Experience exp={exp} />
           ))}
@@ -64,10 +64,10 @@ export default function Resume() {
 
       {/* Education */}
       <Grid container className={classes.item}>
-        <Grid item sm={3} lg={2}>
+        <Grid item xs={12} md={2}>
           <Item title="Education" />
         </Grid>
-        <Grid item sm={9} lg={10}>
+        <Grid item xs={12} md={10}>
           {education.map(edu => (
             <Education edu={edu} />
           ))}
@@ -75,19 +75,19 @@ export default function Resume() {
       </Grid>
 
       <Grid container className={classes.item}>
-        <Grid item sm={3} lg={2}>
+        <Grid item xs={12} md={2}>
           <Item title="Skills" />
         </Grid>
-        <Grid item sm={9} lg={10}>
+        <Grid item xs={12} md={10}>
           <Skills skills={skills} />
         </Grid>
       </Grid>
 
       <Grid container className={classes.item}>
-        <Grid item sm={3} lg={2}>
+        <Grid item xs={12} md={2}>
           <Item title="Spare Time" />
         </Grid>
-        <Grid item sm={9} lg={10}>
+        <Grid item xs={12} md={10}>
           {spare.map(spare => (
             <Spare spare={spare} />
           ))}
@@ -95,10 +95,10 @@ export default function Resume() {
       </Grid>
 
       <Grid container className={classes.item}>
-        <Grid item sm={3} lg={2}>
+        <Grid item xs={12} md={2}>
           <Item title="Personal Details" />
         </Grid>
-        <Grid item sm={9} lg={10}>
+        <Grid item xs={12} md={10}>
           <PersonalDetails details={details} />
         </Grid>
       </Grid>

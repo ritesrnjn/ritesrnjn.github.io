@@ -22,12 +22,19 @@ const useStyles = makeStyles(theme => ({
     fontSize: 14,
     fontWeight: 300,
     borderRadius: 2
+  },
+  img: {
+    width: '100%',
   }
 }));
 
 export default function Project(props) {
   const { details } = props;
   const classes = useStyles();
+
+  function getImgSrc(fileName) {
+    return process.env.PUBLIC_URL + '/projects/' + fileName;
+  }
 
   return (
     <div>
@@ -42,9 +49,9 @@ export default function Project(props) {
           </Grid>
           <Grid item md={6}>
             <img
-              src={process.env.PUBLIC_URL + '/projects/mojojo.png'}
-              alt="mojojo"
-              style={{ maxWidth: '100%' }}
+              className={classes.img}
+              src={getImgSrc(details.img)}
+              alt={details.id}
             />
           </Grid>
           <Grid item md={6}>

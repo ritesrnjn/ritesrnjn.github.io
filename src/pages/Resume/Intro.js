@@ -24,6 +24,8 @@ const useStyle = makeStyles(theme => ({
 export default function Intro(props) {
   const classes = useStyle();
 
+  const resumeUrl = process.env.PUBLIC_URL + '/resume.pdf';
+
   return (
     <Grid container className={classes.intro}>
       <Grid item xs={6}>
@@ -51,10 +53,10 @@ export default function Intro(props) {
             ritesrnjn@gmail.com
           </Box>
           <Box fontSize={17} fontWeight="fontWeightLight">
-            http://ranjanritesh.com
+            ranjanritesh.com
           </Box>
           <Box fontSize={15} fontWeight="fontWeightLight">
-            <Link href={'javascript:;'} className={classes.link}>
+            <Link href={resumeUrl} className={classes.link} target="_blank">
               <FilePdfOutline style={{ color: '#e24045' }} /> PDF Version
             </Link>
           </Box>

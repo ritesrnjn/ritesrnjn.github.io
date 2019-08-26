@@ -5,6 +5,7 @@ export default [
     description:
       'MOJOJO is a marketplace which connects people with Salons, Spas, Tattoo Studios, Nail Studios & Stylists.',
     techStack: ['PHP', 'AngularJS', 'MySQL', 'Redis', 'Laravel'],
+    img: 'mojojo.jpg',
     homepageUrl: '',
     repoUrl: ''
   },
@@ -14,15 +15,16 @@ export default [
     description:
       "iRelief Services Private Limited is an Aggregator for Healthcare Services. The company's Headquarters' is located in Bangalore, Karnataka. iRelief provides innovative technology solution based services in the domain of healthcare ranging from ambulance, blood bank, homecare and pharmacy services.",
     techStack: ['Python', 'Django', 'Angular5'],
+    img: 'irelief.jpg',
     homepageUrl: '',
     repoUrl: ''
   },
   {
     id: 'malvern',
-    name: 'Malvern',
-    description:
-      "iRelief Services Private Limited is an Aggregator for Healthcare Services. The company's Headquarters' is located in Bangalore, Karnataka. iRelief provides innovative technology solution based services in the domain of healthcare ranging from ambulance, blood bank, homecare and pharmacy services.",
-    techStack: ['Python', 'Django', 'Angular5'],
+    name: 'Malvern Engineering',
+    description: 'Malvern Engineering was established in June 1947, as a general engineering shop, servicing the mining industry.',
+    techStack: ['PHP', 'Wordpress', 'MySql'],
+    img: 'malvern.jpg',
     homepageUrl: '',
     repoUrl: ''
   }
