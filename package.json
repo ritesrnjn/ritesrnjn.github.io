@@ -1,7 +1,8 @@
 {
   "name": "ritranjan.github.io",
   "version": "2.0.0",
-  "private": true,
+  "homepage": "http://ritesrnjn.github.io/ritesrnjn.github.io",
+  "private": false,
   "dependencies": {
     "@material-ui/core": "^4.3.3",
     "@material-ui/icons": "^4.2.1",
