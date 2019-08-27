@@ -1,7 +1,7 @@
 {
   "name": "ritranjan.github.io",
   "version": "2.0.0",
-  "homepage": "http://ritesrnjn.github.io/ritesrnjn.github.io",
+  "homepage": "https://ritesrnjn.github.io",
   "private": false,
   "dependencies": {
     "@material-ui/core": "^4.3.3",
@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "build": "react-scripts build",
     "lint": "eslint src/ --fix",
     "prettify": "pretty-quick",
