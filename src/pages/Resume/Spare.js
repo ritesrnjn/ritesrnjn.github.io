@@ -12,7 +12,7 @@ const useStyle = makeStyles(theme => ({
   }
 }));
 
-export default function Spare(props) {
+function Spare(props) {
   const { spare } = props;
   const classes = useStyle();
   return (
@@ -25,22 +25,28 @@ export default function Spare(props) {
           {spare.desc}
         </Box>
 
-        <div className={classes.details}>
-          {spare.repo && (
-            <Box fontSize={15} fontWeight="fontWeightLight">
-              Git: {spare.repo}
-            </Box>
-          )}
-        </div>
+        {spare.repo && (
+          <Box
+            fontSize={15}
+            fontWeight="fontWeightLight"
+            className={classes.details}
+          >
+            Git: {spare.repo}
+          </Box>
+        )}
 
-        <div className={classes.details}>
-          {spare.stack && (
-            <Box fontSize={15} fontWeight="fontWeightLight">
-              {spare.stack.join(' – ')}
-            </Box>
-          )}
-        </div>
+        {spare.stack && (
+          <Box
+            fontSize={15}
+            fontWeight="fontWeightLight"
+            className={classes.details}
+          >
+            {spare.stack.join(' – ')}
+          </Box>
+        )}
       </Typography>
     </div>
   );
 }
+
+export default Spare;

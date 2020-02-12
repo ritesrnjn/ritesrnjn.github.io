@@ -5,6 +5,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import myPic from '../../assets/img/me.jpg';
 import Social from '../../components/Social';
+import contact from '../../config/contact';
 
 const useStyle = makeStyles(theme => ({
   bigAvatar: {
@@ -17,19 +18,21 @@ const useStyle = makeStyles(theme => ({
   }
 }));
 
-export default function Home() {
+function Home() {
   const classes = useStyle();
   return (
     <Grid container direction="column" alignItems="center">
       <Avatar alt="Ritesh" src={myPic} className={classes.bigAvatar} />
 
-      <Typography variant="h4">Ritesh Ranjan</Typography>
+      <Typography variant="h4">{contact.name}</Typography>
 
       <Typography variant="subtitle1" className={classes.textMuted}>
-        Designer, developer, painter, and overall a pretty nice guy
+        {contact.about}
       </Typography>
 
       <Social className={classes.social} />
     </Grid>
   );
 }
+
+export default Home;

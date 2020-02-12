@@ -9,9 +9,18 @@ export default {
     title: 'Web',
     tech: [
       ['Django', 'Celery', 'MySql', 'Redis', 'SQLite'],
-      ['jQuery', 'React', 'Redux', 'AngularJS', 'Angular', 'Node.js', 'Express'],
+      [
+        'jQuery',
+        'React',
+        'Redux',
+        'AngularJS',
+        'Angular',
+        'Node.js',
+        'Express'
+      ],
       ['HTML5', 'Pug', 'CSS3', 'Sass', 'Bootstrap', 'JSS', 'MaterialUI'],
-      ['AWS', 'GCP', 'Laravel 5', 'Wordpress']
+      ['PHP', 'Laravel 5', 'Wordpress'],
+      ['AWS', 'GCP', 'Heroku', 'DigitalOcean']
     ]
   },
   other: {
