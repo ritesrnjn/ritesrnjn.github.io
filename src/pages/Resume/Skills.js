@@ -39,7 +39,7 @@ export default function Skills(props) {
           </div>
 
           <div className={classes.rating}>
-            <RatingStars stars={3.5} />
+            <RatingStars stars={3} />
             &nbsp;&nbsp;
             <Box fontSize={17} fontWeight="fontWeightLight" display="inline">
               {skills.languages.intermediate.join(', ')}
@@ -47,7 +47,7 @@ export default function Skills(props) {
           </div>
 
           <div className={classes.rating}>
-            <RatingStars stars={2} /> &nbsp;&nbsp;
+            <RatingStars stars={1} /> &nbsp;&nbsp;
             <Box fontSize={17} fontWeight="fontWeightLight" display="inline">
               {skills.languages.beginner.join(', ')}
             </Box>

@@ -18,11 +18,15 @@ const useStyle = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'flex-end'
+  },
+  pdfLogo: {
+    color: '#e24045'
   }
 }));
 
-export default function Intro(props) {
+function Intro(props) {
   const classes = useStyle();
+  const { details } = props;
 
   const resumeUrl = process.env.PUBLIC_URL + '/resume.pdf';
 
@@ -36,10 +40,10 @@ export default function Intro(props) {
             color="primary.main"
             m={0}
           >
-            Ritesh Ranjan
+            {details.name}
           </Box>
           <Box fontSize={20} fontWeight="fontWeightLight" m={0}>
-            Full Stack Developer
+            {details.designation}
           </Box>
         </Typography>
       </Grid>
@@ -47,17 +51,17 @@ export default function Intro(props) {
       <Grid item xs={6}>
         <Typography component="div" align="right">
           <Box fontSize={17} fontWeight="fontWeightLight">
-            (+91) 8861 089 200
+            {details.mobile}
           </Box>
           <Box fontSize={17} fontWeight="fontWeightLight">
-            ritesrnjn@gmail.com
+            {details.email}
           </Box>
           <Box fontSize={17} fontWeight="fontWeightLight">
-            ranjanritesh.com
+            {details.website}
           </Box>
-          <Box fontSize={15} fontWeight="fontWeightLight">
+          <Box fontSize={15} fontWeight="fontWeightLight" displayPrint="none">
             <Link href={resumeUrl} className={classes.link} target="_blank">
-              <FilePdfOutline style={{ color: '#e24045' }} /> PDF Version
+              <FilePdfOutline className={classes.pdfLogo} /> PDF Version
             </Link>
           </Box>
         </Typography>
@@ -65,3 +69,5 @@ export default function Intro(props) {
     </Grid>
   );
 }
+
+export default Intro;

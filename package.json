@@ -3,6 +3,14 @@
   "version": "2.0.0",
   "homepage": "https://ritesrnjn.github.io",
   "private": false,
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "lint": "eslint src/ --fix",
+    "prettify": "pretty-quick"
+  },
   "dependencies": {
     "@material-ui/core": "^4.3.3",
     "@material-ui/icons": "^4.2.1",
@@ -15,15 +23,6 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.1.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
-    "lint": "eslint src/ --fix",
-    "prettify": "pretty-quick",
-    "eject": "react-scripts eject"
-  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/node": "^7.5.5",
@@ -34,10 +33,10 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.14.3",
-    "husky": "^3.0.4",
-    "lint-staged": "^9.2.3",
+    "husky": "^4.2.2",
+    "lint-staged": "^10.0.7",
     "prettier": "^1.18.2",
-    "pretty-quick": "^1.11.1"
+    "pretty-quick": "^2.0.1"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
-import { social } from 'config';
 
 import Twitter from 'mdi-material-ui/Twitter';
 import GithubCircle from 'mdi-material-ui/GithubCircle';
@@ -9,6 +8,8 @@ import Email from 'mdi-material-ui/Email';
 import Bitbucket from 'mdi-material-ui/Bitbucket';
 import StackOverflow from 'mdi-material-ui/StackOverflow';
 import Linkedin from 'mdi-material-ui/Linkedin';
+
+import social from '../../config/social';
 
 const useStyles = makeStyles(theme => ({
   social: {
@@ -53,6 +54,7 @@ const useStyles = makeStyles(theme => ({
 
 function Social() {
   const classes = useStyles();
+
   const getPageLink = page => {
     switch (page) {
       case 'twitter':

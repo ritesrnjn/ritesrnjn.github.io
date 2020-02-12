@@ -12,7 +12,7 @@ const useStyle = makeStyles(theme => ({
   }
 }));
 
-export default function Spare(props) {
+function Spare(props) {
   const { spare } = props;
   const classes = useStyle();
   return (
@@ -44,3 +44,5 @@ export default function Spare(props) {
     </div>
   );
 }
+
+export default Spare;
