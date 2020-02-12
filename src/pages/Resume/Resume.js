@@ -36,7 +36,7 @@ const useStyle = makeStyles(theme => ({
 function Item(props) {
   const { title } = props;
   return (
-    <Typography color="primary">
+    <Typography component="div" color="primary">
       <Box fontSize={22} fontWeight="fontWeightLight">
         {title}
       </Box>
@@ -58,7 +58,7 @@ export default function Resume() {
         </Grid>
         <Grid item xs={12} md={10}>
           {experience.map(exp => (
-            <Experience exp={exp} />
+            <Experience key={exp.duration} exp={exp} />
           ))}
         </Grid>
       </Grid>
@@ -70,7 +70,7 @@ export default function Resume() {
         </Grid>
         <Grid item xs={12} md={10}>
           {education.map(edu => (
-            <Education edu={edu} />
+            <Education key={edu.begin} edu={edu} />
           ))}
         </Grid>
       </Grid>
@@ -90,7 +90,7 @@ export default function Resume() {
         </Grid>
         <Grid item xs={12} md={10}>
           {spare.map(spare => (
-            <Spare spare={spare} />
+            <Spare key={spare.title} spare={spare} />
           ))}
         </Grid>
       </Grid>

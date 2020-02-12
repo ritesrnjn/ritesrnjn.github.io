@@ -15,12 +15,12 @@ const useStyle = makeStyles(theme => ({
   }
 }));
 
-export default function Skills(props) {
+function Skills(props) {
   const { skills } = props;
   const classes = useStyle();
   return (
     <div>
-      <Typography>
+      <Typography component="div">
         <Box fontSize={18} fontWeight="fontWeightNormal" display="inline">
           {'Software engineering & web development'}
         </Box>
@@ -61,7 +61,7 @@ export default function Skills(props) {
             {skills.web.title}
           </Box>
           {skills.web.tech.map(t => (
-            <div>
+            <div key={t[0]}>
               <Box fontSize={17} fontWeight="fontWeightLight" display="inline">
                 {t.join(' – ')}
               </Box>
@@ -76,7 +76,7 @@ export default function Skills(props) {
             {skills.other.title}
           </Box>
           {skills.other.tech.map(t => (
-            <div>
+            <div key={t[0]}>
               <Box fontSize={17} fontWeight="fontWeightLight" display="inline">
                 {t.join(' – ')}
               </Box>
@@ -87,3 +87,5 @@ export default function Skills(props) {
     </div>
   );
 }
+
+export default Skills;

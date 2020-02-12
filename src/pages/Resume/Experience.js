@@ -23,15 +23,38 @@ export default function Experience(props) {
         <Box fontSize={18} fontWeight="fontWeightLight" display="inline">
           {exp.designation} at {exp.company}
         </Box>
+        <Box fontWeight="fontWeightLight">{exp.helpText}</Box>
       </Typography>
 
-      {exp.projects.map(p => (
-        <Typography component="div" className={classes.project}>
+      {exp.projects.map(proj => (
+        <Typography
+          key={proj.title}
+          component="div"
+          className={classes.project}
+        >
           <Box fontSize={20} fontWeight="fontWeightLight">
-            {p.title}
+            {proj.title}
           </Box>
           <Box fontSize={15} fontWeight="fontWeightLight">
-            {p.description}
+            {proj.description}
+          </Box>
+          {proj.list &&
+            proj.list.map(i => (
+              <Box
+                key={i}
+                fontSize={15}
+                fontWeight="fontWeightLight"
+                style={{ marginLeft: '1em' }}
+              >
+                {i}
+              </Box>
+            ))}
+          <Box
+            fontSize={15}
+            fontWeight="fontWeightLight"
+            style={{ marginLeft: '4em' }}
+          >
+            {proj.techStack.join(' – ')}
           </Box>
         </Typography>
       ))}

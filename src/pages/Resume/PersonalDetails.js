@@ -8,7 +8,7 @@ export default function PersonalDetails(props) {
   return (
     <Typography component="div">
       {details.map(d => (
-        <div>
+        <div key={d.name}>
           <Box fontSize={18} fontWeight="fontWeightLight" display="inline">
             {d.name}: &nbsp;{d.value}
           </Box>
