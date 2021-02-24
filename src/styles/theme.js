@@ -11,7 +11,13 @@ const theme = createMuiTheme({
     secondary: {
       main: '#ffffff'
     }
-  }
+  },
+  typography: {
+    h6: {
+      fontSize: 22,
+      fontWeight: 300,
+    },
+  },
 });
 
 export default theme;

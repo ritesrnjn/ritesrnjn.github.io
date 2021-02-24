@@ -27,7 +27,7 @@ export default [
     ]
   },
   {
-    title: 'Hobbies',
-    desc: 'Sketching, Music, Electronics'
+    title: 'Interests',
+    desc: 'Sketching, Electronics, Hindi Literature'
   }
 ];

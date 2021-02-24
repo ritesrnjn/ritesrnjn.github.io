@@ -25,7 +25,7 @@ import contact from '../../config/contact';
 const useStyle = makeStyles(theme => ({
   root: {
     marginTop: '3em',
-    marginBottom: '2em'
+    marginBottom: '2em',
   },
   item: {
     marginTop: '2em'
@@ -33,15 +33,21 @@ const useStyle = makeStyles(theme => ({
   footer: { marginTop: '2em', color: '#a2a2a2' }
 }));
 
-function Item(props) {
-  const { title } = props;
-  return (
-    <Typography component="div" color="primary">
-      <Box fontSize={22} fontWeight="fontWeightLight">
-        {title}
-      </Box>
-    </Typography>
-  );
+function Section(props) {
+  const classes = useStyle();
+  const { title, children } = props;
+  return(
+    <Grid container className={classes.item}>
+      <Grid item sm={2} style={{minWidth: 120}}>
+        <Typography color="primary" variant="h6">
+          {title}
+        </Typography>
+      </Grid>
+      <Grid item sm={10}>
+        {children}
+      </Grid>
+    </Grid>
+  )
 }
 
 export default function Resume() {
@@ -52,57 +58,31 @@ export default function Resume() {
       <Intro details={contact} />
       <Divider />
 
-      <Grid container className={classes.item}>
-        <Grid item xs={12} md={2}>
-          <Item title="Experience" />
-        </Grid>
-        <Grid item xs={12} md={10}>
+      <Section title="Experience">
           {experience.map(exp => (
             <Experience key={exp.duration} exp={exp} />
           ))}
-        </Grid>
-      </Grid>
+      </Section>
 
-      {/* Education */}
-      <Grid container className={classes.item}>
-        <Grid item xs={12} md={2}>
-          <Item title="Education" />
-        </Grid>
-        <Grid item xs={12} md={10}>
-          {education.map(edu => (
-            <Education key={edu.begin} edu={edu} />
-          ))}
-        </Grid>
-      </Grid>
+      <Section title="Education">
+        {education.map(edu => (
+          <Education key={edu.begin} edu={edu} />
+        ))}
+      </Section>
 
-      <Grid container className={classes.item}>
-        <Grid item xs={12} md={2}>
-          <Item title="Skills" />
-        </Grid>
-        <Grid item xs={12} md={10}>
-          <Skills skills={skills} />
-        </Grid>
-      </Grid>
+      <Section title="Skills">
+        <Skills skills={skills} />
+      </Section>
 
-      <Grid container className={classes.item}>
-        <Grid item xs={12} md={2}>
-          <Item title="Spare Time" />
-        </Grid>
-        <Grid item xs={12} md={10}>
-          {spare.map(spare => (
-            <Spare key={spare.title} spare={spare} />
-          ))}
-        </Grid>
-      </Grid>
+      <Section title="Spare Time">
+        {spare.map(spare => (
+          <Spare key={spare.title} spare={spare} />
+        ))}
+      </Section>
 
-      <Grid container className={classes.item}>
-        <Grid item xs={12} md={2}>
-          <Item title="Personal Details" />
-        </Grid>
-        <Grid item xs={12} md={10}>
-          <PersonalDetails details={personalDetails} />
-        </Grid>
-      </Grid>
+      <Section title="Personal Details">
+        <PersonalDetails details={personalDetails} />
+      </Section>
 
       <Divider style={{ marginTop: '2em' }} />
 
@@ -112,7 +92,8 @@ export default function Resume() {
           fontWeight="fontWeightLight"
           className={classes.footer}
         >
-          last update: February 2020
+          last update: February 2021<br/>
+          online version: https://ranjanritesh.com/resume.pdf
         </Box>
       </Typography>
     </Container>

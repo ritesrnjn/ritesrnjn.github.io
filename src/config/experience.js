@@ -7,16 +7,22 @@ export default [
       'Client name is not mentioned in projects due to confidentiality clause.',
     projects: [
       {
+        title: 'Ecommerce Application',
+        techStack: ['Angular', 'SASS', 'NodeJS', 'CyberSource', 'Elastic Path'],
+        description:
+          'An online marketplace for selling life science products.'
+      },
+      {
         title: 'Quoting tool',
         techStack: ['Hybris', 'React', 'SASS'],
         description:
-          'This is quick quoting tool for consumption-based IT solutions‎. Backend services have been created using SAP Hybris while react has been used in client side.'
+          'A quick quoting tool for consumption-based IT solutions‎. Backend services have been created using SAP Hybris while react has been used in client side.'
       },
       {
         title: 'Production Lines Tracker',
         techStack: ['Thingworx', 'React', 'JSS'],
         description:
-          'This is a complete IoT solution for end to end monitoring of production lines in manufacturing unit. It uses Thingworx IoT platform for receiving data from on-site sensors, processing & storing the collected data and show the required information.'
+          'A complete IoT solution for end to end monitoring of production lines in manufacturing unit. It uses Thingworx IoT platform for receiving data from on-site sensors, processing & storing the collected data and show the required information.'
       },
       {
         title: 'Dynamic Vehicle Router',
@@ -74,26 +80,10 @@ export default [
           'It has a REST based architecture.'
       },
       {
-        title: 'Khwand',
-        techStack: ['Angular', 'NodeJS', 'Pug', 'SASS'],
+        title: 'Malvern',
+        techStack: ['PHP', 'Wordpress', 'JavaScript', 'MySQL'],
         description:
-          'Khwand is a food ordering & delivery app available for android and iOS. ' +
-          'It has multilingual dashboard for order management.'
-      },
-      {
-        title: 'Others',
-        techStack: ['JavaScript', 'Wordpress', 'PHP'],
-        description: 'Created following websites:',
-        list: [
-          'malvern.co.za',
-          'iprimitus.com',
-          'gandhiabhinav.com',
-          'cleoconsult.com',
-          'aryavarthadc.co.in',
-          'shumar-engineering.com',
-          'ipwagon.com',
-          'swencomagnetics.com'
-        ]
+        "Malvern Engineering was established in June 1947, as a general engineering shop, servicing the mining industry."
       }
     ]
   }
