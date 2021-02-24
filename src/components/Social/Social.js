@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Twitter from 'mdi-material-ui/Twitter';
-import GithubCircle from 'mdi-material-ui/GithubCircle';
+import Github from 'mdi-material-ui/Github';
 import Email from 'mdi-material-ui/Email';
 import Bitbucket from 'mdi-material-ui/Bitbucket';
 import StackOverflow from 'mdi-material-ui/StackOverflow';
@@ -85,7 +85,7 @@ function Social() {
       )}
       {social.github && (
         <a href={getPageLink('github')}>
-          <GithubCircle
+          <Github
             className={classNames(classes.socialIcon, classes.github)}
           />
         </a>
