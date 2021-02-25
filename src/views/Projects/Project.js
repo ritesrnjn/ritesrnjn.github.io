@@ -5,25 +5,25 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: '4em',
-    marginBottom: '4em'
+    marginBottom: '4em',
   },
   projectContainer: {
     display: 'flex',
     flexDirection: 'column',
     height: '100%',
-    marginTop: theme.spacing(2)
+    marginTop: theme.spacing(2),
   },
   title: {
     color: theme.palette.primary.main,
     fontSize: 28,
     fontWeight: 300,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   techStack: {
-    marginTop: 10
+    marginTop: 10,
   },
   chip: {
     display: 'inline',
@@ -33,13 +33,13 @@ const useStyles = makeStyles(theme => ({
     padding: '3px 6px',
     fontSize: 14,
     fontWeight: 300,
-    borderRadius: 2
+    borderRadius: 2,
   },
   img: {
     width: '100%',
     border: '1px solid #ebebeb',
-    borderRadius: 3
-  }
+    borderRadius: 3,
+  },
 }));
 
 export default function Project(props) {
@@ -55,16 +55,10 @@ export default function Project(props) {
       <div className={classes.root}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Typography className={classes.title}>
-              {details.name}
-            </Typography>
+            <Typography className={classes.title}>{details.name}</Typography>
           </Grid>
           <Grid item md={6}>
-            <img
-              className={classes.img}
-              src={getImgSrc(details.img)}
-              alt={details.id}
-            />
+            <img className={classes.img} src={getImgSrc(details.img)} alt={details.id} />
           </Grid>
           <Grid item md={6}>
             <div className={classes.projectContainer}>
@@ -88,7 +82,7 @@ export default function Project(props) {
 
               {details.techStack.length > 0 && (
                 <div className={classes.techStack}>
-                  {details.techStack.map(t => (
+                  {details.techStack.map((t) => (
                     <div className={classes.chip}>{t}</div>
                   ))}
                 </div>

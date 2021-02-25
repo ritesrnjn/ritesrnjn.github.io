@@ -6,22 +6,22 @@ import { makeStyles } from '@material-ui/core';
 import FilePdfOutline from 'mdi-material-ui/FilePdfOutline';
 import Link from '@material-ui/core/Link';
 
-const useStyle = makeStyles(theme => ({
+const useStyle = makeStyles((theme) => ({
   intro: {
-    marginBottom: '3em'
+    marginBottom: '3em',
   },
   designation: {
     paddingLeft: 4,
-    fontWeight: 300
+    fontWeight: 300,
   },
   link: {
     display: 'flex',
     justifyContent: 'flex-end',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   pdfLogo: {
-    color: '#e24045'
-  }
+    color: '#e24045',
+  },
 }));
 
 function Intro(props) {
@@ -34,12 +34,7 @@ function Intro(props) {
     <Grid container className={classes.intro}>
       <Grid item xs={6}>
         <Typography component="div">
-          <Box
-            fontSize={45}
-            fontWeight="fontWeightLight"
-            color="primary.main"
-            m={0}
-          >
+          <Box fontSize={45} fontWeight="fontWeightLight" color="primary.main" m={0}>
             {details.name}
           </Box>
           <Box fontSize={20} fontWeight="fontWeightLight" m={0}>

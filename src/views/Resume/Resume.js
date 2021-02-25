@@ -22,23 +22,23 @@ import Spare from './Spare';
 import PersonalDetails from './PersonalDetails';
 import contact from '../../config/contact';
 
-const useStyle = makeStyles(theme => ({
+const useStyle = makeStyles((theme) => ({
   root: {
     marginTop: '3em',
     marginBottom: '2em',
   },
   item: {
-    marginTop: '2em'
+    marginTop: '2em',
   },
-  footer: { marginTop: '2em', color: '#a2a2a2' }
+  footer: { marginTop: '2em', color: '#a2a2a2' },
 }));
 
 function Section(props) {
   const classes = useStyle();
   const { title, children } = props;
-  return(
+  return (
     <Grid container className={classes.item}>
-      <Grid item sm={2} style={{minWidth: 120}}>
+      <Grid item sm={2} style={{ minWidth: 120 }}>
         <Typography color="primary" variant="h6">
           {title}
         </Typography>
@@ -47,7 +47,7 @@ function Section(props) {
         {children}
       </Grid>
     </Grid>
-  )
+  );
 }
 
 export default function Resume() {
@@ -59,13 +59,13 @@ export default function Resume() {
       <Divider />
 
       <Section title="Experience">
-          {experience.map(exp => (
-            <Experience key={exp.duration} exp={exp} />
-          ))}
+        {experience.map((exp) => (
+          <Experience key={exp.duration} exp={exp} />
+        ))}
       </Section>
 
       <Section title="Education">
-        {education.map(edu => (
+        {education.map((edu) => (
           <Education key={edu.begin} edu={edu} />
         ))}
       </Section>
@@ -75,7 +75,7 @@ export default function Resume() {
       </Section>
 
       <Section title="Spare Time">
-        {spare.map(spare => (
+        {spare.map((spare) => (
           <Spare key={spare.title} spare={spare} />
         ))}
       </Section>
@@ -87,12 +87,9 @@ export default function Resume() {
       <Divider style={{ marginTop: '2em' }} />
 
       <Typography component="div" align="center">
-        <Box
-          fontSize={16}
-          fontWeight="fontWeightLight"
-          className={classes.footer}
-        >
-          last update: February 2021<br/>
+        <Box fontSize={16} fontWeight="fontWeightLight" className={classes.footer}>
+          last update: February 2021
+          <br />
           online version: https://ranjanritesh.com/#/resume
         </Box>
       </Typography>

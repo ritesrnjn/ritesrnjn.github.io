@@ -13,7 +13,7 @@ export default function Resume() {
       <Typography variant="h4" align="center" gutterBottom>
         Projects
       </Typography>
-      {projects.map(p => (
+      {projects.map((p) => (
         <Project key={p.id} details={p} />
       ))}
     </Container>

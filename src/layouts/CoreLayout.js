@@ -12,13 +12,13 @@ import globalStyles from '../styles/global';
 import Home from '../views/Home';
 import Projects from '../views/Projects';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   ...globalStyles,
   container: {
     [theme.breakpoints.up('lg')]: {
-      width: 1170
-    }
-  }
+      width: 1170,
+    },
+  },
 }));
 
 export default function CoreLayout() {

@@ -5,8 +5,8 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 const StyledRating = withStyles({
   iconFilled: {
-    color: 'rgb(39, 168, 34)'
-  }
+    color: 'rgb(39, 168, 34)',
+  },
 })(Rating);
 
 export default function RatingStars(props) {

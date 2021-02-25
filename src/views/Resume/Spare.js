@@ -3,13 +3,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
-const useStyle = makeStyles(theme => ({
+const useStyle = makeStyles((theme) => ({
   section: {
-    marginBottom: '1em'
+    marginBottom: '1em',
   },
   details: {
-    marginLeft: '4em'
-  }
+    marginLeft: '4em',
+  },
 }));
 
 function Spare(props) {
@@ -26,21 +26,13 @@ function Spare(props) {
         </Box>
 
         {spare.repo && (
-          <Box
-            fontSize={15}
-            fontWeight="fontWeightLight"
-            className={classes.details}
-          >
+          <Box fontSize={15} fontWeight="fontWeightLight" className={classes.details}>
             Git: {spare.repo}
           </Box>
         )}
 
         {spare.stack && (
-          <Box
-            fontSize={15}
-            fontWeight="fontWeightLight"
-            className={classes.details}
-          >
+          <Box fontSize={15} fontWeight="fontWeightLight" className={classes.details}>
             {spare.stack.join(' – ')}
           </Box>
         )}

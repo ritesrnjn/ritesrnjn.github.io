@@ -11,15 +11,15 @@ import BackgroundImg from 'assets/images/404.png';
 const styles = {
   ...globalStyles,
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   MainNav: {
-    display: 'none'
+    display: 'none',
   },
   h1: {
     color: '#d3062b',
     fontSize: 150,
-    fontWeight: 900
+    fontWeight: 900,
   },
   fullContainer: {
     backgroundColor: '#121212',
@@ -31,14 +31,14 @@ const styles = {
     backgroundSize: 'cover',
     overflowX: 'hidden',
     overflowY: 'hidden',
-    height: 923
+    height: 923,
   },
   h2: {
     fontSize: 30,
     fontWeight: 600,
     marginBottom: 120,
     position: 'relative',
-    bottom: 150
+    bottom: 150,
   },
   rootLink: {
     backgroundColor: '#d3062b',
@@ -49,8 +49,8 @@ const styles = {
     padding: '17px 107px',
     textDecoration: 'none',
     position: 'relative',
-    bottom: 200
-  }
+    bottom: 200,
+  },
 };
 
 function NoMatch(props) {

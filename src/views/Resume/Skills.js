@@ -5,14 +5,14 @@ import Box from '@material-ui/core/Box';
 
 import RatingStars from './RatingStars';
 
-const useStyle = makeStyles(theme => ({
+const useStyle = makeStyles((theme) => ({
   section: {
-    marginBottom: '1em'
+    marginBottom: '1em',
   },
   rating: {
     width: '100%',
-    display: 'flex'
-  }
+    display: 'flex',
+  },
 }));
 
 function Skills(props) {
@@ -60,7 +60,7 @@ function Skills(props) {
           <Box fontSize={20} fontWeight="fontWeightLight">
             {skills.web.title}
           </Box>
-          {skills.web.tech.map(t => (
+          {skills.web.tech.map((t) => (
             <div key={t[0]}>
               <Box fontSize={17} fontWeight="fontWeightLight" display="inline">
                 {t.join(' – ')}
@@ -75,7 +75,7 @@ function Skills(props) {
           <Box fontSize={20} fontWeight="fontWeightLight" display="inline">
             {skills.other.title}
           </Box>
-          {skills.other.tech.map(t => (
+          {skills.other.tech.map((t) => (
             <div key={t[0]}>
               <Box fontSize={17} fontWeight="fontWeightLight" display="inline">
                 {t.join(' – ')}
