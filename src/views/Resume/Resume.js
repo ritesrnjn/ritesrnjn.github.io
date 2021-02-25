@@ -93,7 +93,7 @@ export default function Resume() {
           className={classes.footer}
         >
           last update: February 2021<br/>
-          online version: https://ranjanritesh.com/resume.pdf
+          online version: https://ranjanritesh.com/#/resume
         </Box>
       </Typography>
     </Container>

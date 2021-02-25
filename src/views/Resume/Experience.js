@@ -15,7 +15,7 @@ export default function Experience(props) {
 
   return (
     <div>
-      <Typography component="div">
+      <Typography component="div" style={{marginBottom: '.5em'}}>
         <Box fontSize={18} fontWeight="fontWeightNormal" display="inline">
           {exp.duration}
         </Box>
@@ -26,20 +26,20 @@ export default function Experience(props) {
         <Box fontWeight="fontWeightLight">{exp.helpText}</Box>
       </Typography>
 
-      {exp.projects.map(proj => (
+      {exp.projects.map(project => (
         <Typography
-          key={proj.title}
+          key={project.title}
           component="div"
           className={classes.project}
         >
           <Box fontSize={20} fontWeight="fontWeightLight">
-            {proj.title}
+            {project.title}
           </Box>
           <Box fontSize={15} fontWeight="fontWeightLight">
-            {proj.description}
+            {project.description}
           </Box>
-          {proj.list &&
-            proj.list.map(i => (
+          {project.list &&
+          project.list.map(i => (
               <Box
                 key={i}
                 fontSize={15}
@@ -52,9 +52,9 @@ export default function Experience(props) {
           <Box
             fontSize={15}
             fontWeight="fontWeightLight"
-            style={{ marginLeft: '4em' }}
+            style={{ marginLeft: '2em', color:'#777777' }}
           >
-            {proj.techStack.join(' – ')}
+            {project.techStack.join(' – ')}
           </Box>
         </Typography>
       ))}
