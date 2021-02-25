@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/app.css"],"names":[],"mappings":"AAAA,aACI,MACI,gBAAiB,CACjB,WACJ,CACJ","file":"main.c533249d.chunk.css","sourcesContent":["@media print {\n    @page {\n        size: 330mm 427mm;\n        margin: 14mm;\n    }\n}\n"]}
