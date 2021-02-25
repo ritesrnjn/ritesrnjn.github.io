@@ -1,13 +1,10 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-
+import { Route, Switch, HashRouter as Router } from 'react-router-dom';
 import { MuiThemeProvider } from '@material-ui/core';
-import { HashRouter as Router } from 'react-router-dom';
-
 import theme from 'styles/theme';
 import './app.css';
 import CoreLayout from 'layouts/CoreLayout';
-import Resume from './pages/Resume';
+import Resume from './views/Resume';
 
 export default function App() {
   return (

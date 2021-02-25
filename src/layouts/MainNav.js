@@ -12,13 +12,9 @@ const useStyles = makeStyles(theme => ({
   menuItem: {
     marginLeft: theme.spacing(2),
     textDecoration: 'none',
-    color: '#636363'
-  },
-  title: {
-    flexGrow: 1
-  },
-  appBar: {
-    boxShadow: 'none'
+    color: '#636363',
+    textTransform: 'uppercase',
+    letterSpacing: 2
   },
   grow: {
     flexGrow: 1
@@ -28,38 +24,43 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const links=[
+  {
+    id: 'home',
+    to: '/',
+    title: 'Home'
+  },
+  {
+    id: 'projects',
+    to: '/projects',
+    title: 'Projects'
+  },
+  {
+    id: 'resume',
+    to: '/resume',
+    title: 'Resume'
+  }
+]
+
 export default function MainNav() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="secondary" className={classes.appBar}>
+      <AppBar position="static" color="secondary" elevation={0}>
         <Toolbar>
-          <div style={{ flex: 1 }} />
-          <NavLink
-            exact
-            to="/"
-            className={classes.menuItem}
-            activeClassName={classes.active}
-          >
-            Home
-          </NavLink>
-          <NavLink
-            exact
-            to="/projects"
-            className={classes.menuItem}
-            activeClassName={classes.active}
-          >
-            Projects
-          </NavLink>
-          <NavLink
-            exact
-            to="/resume"
-            className={classes.menuItem}
-            activeClassName={classes.active}
-          >
-            Resume
-          </NavLink>
+          <div className={classes.grow} />
+          {links.map(link =>(
+            <NavLink
+              key={link.id}
+              exact
+              to={link.to}
+              className={classes.menuItem}
+              activeClassName={classes.active}
+            >
+              {link.title}
+            </NavLink>
+          ))}
         </Toolbar>
       </AppBar>
     </div>

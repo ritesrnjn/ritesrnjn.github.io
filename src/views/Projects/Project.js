@@ -10,6 +10,18 @@ const useStyles = makeStyles(theme => ({
     marginTop: '4em',
     marginBottom: '4em'
   },
+  projectContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100%',
+    marginTop: theme.spacing(2)
+  },
+  title: {
+    color: theme.palette.primary.main,
+    fontSize: 28,
+    fontWeight: 300,
+    textAlign: 'center'
+  },
   techStack: {
     marginTop: 10
   },
@@ -25,6 +37,8 @@ const useStyles = makeStyles(theme => ({
   },
   img: {
     width: '100%',
+    border: '1px solid #ebebeb',
+    borderRadius: 3
   }
 }));
 
@@ -41,10 +55,8 @@ export default function Project(props) {
       <div className={classes.root}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Typography component="div" align="center">
-              <Box fontSize={28} fontWeight="400">
-                {details.name}
-              </Box>
+            <Typography className={classes.title}>
+              {details.name}
             </Typography>
           </Grid>
           <Grid item md={6}>
@@ -55,32 +67,33 @@ export default function Project(props) {
             />
           </Grid>
           <Grid item md={6}>
-            <Typography component="div">
-              <Box fontSize={15} fontWeight="fontWeightLight">
-                {details.description}
-              </Box>
-            </Typography>
+            <div className={classes.projectContainer}>
+              <Typography component="div">
+                <Box fontSize={15} fontWeight="fontWeightLight">
+                  {details.description}
+                </Box>
+              </Typography>
 
-            {details.homepageUrl && (
-              <div>
-                <a href={details.homepage}> view homepage</a>
-              </div>
-            )}
+              {details.homepageUrl && (
+                <div>
+                  <a href={details.homepage}> view homepage</a>
+                </div>
+              )}
 
-            {details.repoUrl && (
-              <div>
-                <a href={details.repoUrl}> view repo </a>
-              </div>
-            )}
+              {details.repoUrl && (
+                <div>
+                  <a href={details.repoUrl}> view repo </a>
+                </div>
+              )}
 
-            {details.techStack.length > 0 && (
-              <div className={classes.techStack}>
-                <Typography variant="body1">Tech Stack</Typography>
-                {details.techStack.map(t => (
-                  <div className={classes.chip}>{t}</div>
-                ))}
-              </div>
-            )}
+              {details.techStack.length > 0 && (
+                <div className={classes.techStack}>
+                  {details.techStack.map(t => (
+                    <div className={classes.chip}>{t}</div>
+                  ))}
+                </div>
+              )}
+            </div>
           </Grid>
         </Grid>
       </div>

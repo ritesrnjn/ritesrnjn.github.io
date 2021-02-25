@@ -6,11 +6,11 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // Components
 import MainNav from '../layouts/MainNav';
-import RedirectAs404 from '../pages/NoMatch/RedirectAs404';
+import RedirectAs404 from '../views/NoMatch/RedirectAs404';
 import globalStyles from '../styles/global';
 
-import Home from '../pages/Home';
-import Projects from '../pages/Projects';
+import Home from '../views/Home';
+import Projects from '../views/Projects';
 
 const useStyles = makeStyles(theme => ({
   ...globalStyles,
