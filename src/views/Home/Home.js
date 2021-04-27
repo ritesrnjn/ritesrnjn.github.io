@@ -26,7 +26,7 @@ const useStyle = makeStyles((theme) => ({
 
 function Home() {
   const classes = useStyle();
-  const {name, about} = resume.contact;
+  const { name, about } = resume.contact;
   return (
     <Grid container direction="column" alignItems="center">
       <Avatar alt="Ritesh" src={myPic} className={classes.bigAvatar} />

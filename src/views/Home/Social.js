@@ -58,12 +58,12 @@ function Social() {
   return (
     <div className={classes.social}>
       {social.twitter && (
-        <a href={`http://twitter.com/${social.twitter}`} target='_blank' rel="noreferrer">
+        <a href={`http://twitter.com/${social.twitter}`} target="_blank" rel="noreferrer">
           <Twitter className={classNames(classes.socialIcon, classes.twitter)} />
         </a>
       )}
       {social.github && (
-        <a href={`http://github.com/${social.github}`} target='_blank' rel="noreferrer">
+        <a href={`http://github.com/${social.github}`} target="_blank" rel="noreferrer">
           <Github className={classNames(classes.socialIcon, classes.github)} />
         </a>
       )}
@@ -73,17 +73,17 @@ function Social() {
         </a>
       )}
       {social.bitbucket && (
-        <a href={`https://bitbucket.org/${social.bitbucket}`} target='_blank' rel="noreferrer">
+        <a href={`https://bitbucket.org/${social.bitbucket}`} target="_blank" rel="noreferrer">
           <Bitbucket className={classNames(classes.socialIcon, classes.bitbucket)} />
         </a>
       )}
       {social.stackoverflow && (
-        <a href={`http://stackoverflow.com/${social.stackoverflow}`} target='_blank' rel="noreferrer">
+        <a href={`http://stackoverflow.com/${social.stackoverflow}`} target="_blank" rel="noreferrer">
           <StackOverflow className={classNames(classes.socialIcon, classes.stackoverflow)} />
         </a>
       )}
       {social.linkedin && (
-        <a href={`http://linkedin.com/in/${social.linkedin}`} target='_blank' rel="noreferrer">
+        <a href={`http://linkedin.com/in/${social.linkedin}`} target="_blank" rel="noreferrer">
           <Linkedin className={classNames(classes.socialIcon, classes.linkedin)} />
         </a>
       )}

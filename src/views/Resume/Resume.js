@@ -11,8 +11,7 @@ import Education from './Education';
 import Skills from './Skills';
 import Spare from './Spare';
 import PersonalDetails from './PersonalDetails';
-import resume from 'src/config/resume.json'
-
+import resume from 'src/config/resume.json';
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -44,7 +43,7 @@ function Section(props) {
 
 export default function Resume() {
   const classes = useStyle();
-  const {contact, experience, education, skills, spare, personalDetails} = resume;
+  const { contact, experience, education, skills, spare, personalDetails } = resume;
 
   return (
     <Container maxWidth="md" className={classes.root}>
