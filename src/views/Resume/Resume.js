@@ -5,22 +5,14 @@ import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
-
-// data
-import experience from '../../config/experience';
-import education from '../../config/education';
-import skills from '../../config/skills';
-import spare from '../../config/spare';
-import personalDetails from '../../config/personalDetails';
-
-// Sections
 import Intro from './Intro';
 import Experience from './Experience';
 import Education from './Education';
 import Skills from './Skills';
 import Spare from './Spare';
 import PersonalDetails from './PersonalDetails';
-import contact from '../../config/contact';
+import resume from 'src/config/resume.json'
+
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -52,6 +44,7 @@ function Section(props) {
 
 export default function Resume() {
   const classes = useStyle();
+  const {contact, experience, education, skills, spare, personalDetails} = resume;
 
   return (
     <Container maxWidth="md" className={classes.root}>

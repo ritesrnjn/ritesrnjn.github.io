@@ -1,16 +1,13 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
-// Components
-import MainNav from '../layouts/MainNav';
-import RedirectAs404 from '../views/NoMatch/RedirectAs404';
-import globalStyles from '../styles/global';
-
-import Home from '../views/Home';
-import Projects from '../views/Projects';
+import MainNav from 'src/layouts/MainNav';
+import RedirectAs404 from 'src/views/NoMatch/RedirectAs404';
+import globalStyles from 'src/styles/global';
+import Home from 'src/views/Home';
+import Projects from 'src/views/Projects';
 
 const useStyles = makeStyles((theme) => ({
   ...globalStyles,

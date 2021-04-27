@@ -1,10 +1,7 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-// Data
-import projects from '../../config/projects';
-
-//Component
+import projects from 'src/config/projects';
 import Project from './Project';
 
 export default function Resume() {
