@@ -45,8 +45,9 @@ export default function LeftDrawer({open, setDrawerOpen, children}: DrawerProps)
                 {children}
               </div>
               <div className='m-2 '>
-                <button type='button' aria-label='close the navigation drawer' tabIndex={0} role='button' onClick={() => setDrawerOpen(false)}>
-                  <XMarkIcon className='text-gray-300'/>
+                <button type='button' aria-label='close the navigation drawer' tabIndex={0} role='button'
+                        onClick={() => setDrawerOpen(false)}>
+                  <XMarkIcon className='text-gray-300' />
                 </button>
               </div>
             </div>

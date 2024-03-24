@@ -7,27 +7,23 @@ const roboto = Roboto({
   weight: ['300', '400', '500'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
-  display: 'swap',
-});
+  display: 'swap'
+})
 
 export const metadata: Metadata = {
-  title: "Ritesh Ranjan",
-  description: "Personal Blog",
-};
+  title: 'Ritesh Ranjan',
+  description: 'Personal Blog'
+}
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
     <body className={roboto.className}>
-      <div className='flex flex-col min-h-screen'>
-        <Header />
-        {children}
-      </div>
+    <div className='flex flex-col min-h-screen'>
+      <Header />
+      {children}
+    </div>
     </body>
     </html>
-);
+  )
 }

@@ -184,7 +184,7 @@
         {
           "name": "Advanced",
           "stars": 4,
-          "languages":  [
+          "languages": [
             "JavaScript",
             "PHP",
             "Python"

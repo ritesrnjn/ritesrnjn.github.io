@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @layer base {
-    @media print {
-        @page {
-            size: 330mm 427mm;
-            margin: 14mm;
-        }
+  @media print {
+    @page {
+      size: 330mm 427mm;
+      margin: 14mm;
     }
+  }
 }
