@@ -10,9 +10,26 @@
   },
   "experience": [
     {
-      "duration": "2022 - Now",
+      "duration": "2023 - Now",
+      "designation": "IT and Process Specialist",
+      "company": "Allianz Technology, Barcelona",
+      "projects": [
+        {
+          "title": "Internal Project",
+          "techStack": [
+            "SAML",
+            "Jenkins",
+            "Angular",
+            "Allianz Tools"
+          ],
+          "description": "Developing an enterprise application to be used withing the organisation."
+        }
+      ]
+    },
+    {
+      "duration": "2022 - 2023",
       "designation": "Senior Consultant",
-      "company": "Deloitte Digital",
+      "company": "Deloitte Digital, Bangalore",
       "projects": [
         {
           "title": "Customer Care Backlog Management Tool",
@@ -36,7 +53,7 @@
     {
       "duration": "2018 – 2021",
       "designation": "Consultant",
-      "company": "Deloitte Digital",
+      "company": "Deloitte Digital, Bangalore",
       "projects": [
         {
           "title": "Ecommerce Application",
@@ -82,7 +99,7 @@
     {
       "duration": "2016 – 2018",
       "designation": "Business Technology Analyst",
-      "company": "Deloitte Digital",
+      "company": "Deloitte Digital, Bangalore",
       "projects": [
         {
           "title": "Citizen's Services Portal",
@@ -110,7 +127,7 @@
     {
       "duration": "2014 – 2016",
       "designation": "Software Developer",
-      "company": "cretechs",
+      "company": "Cretechs, Bangalore",
       "projects": [
         {
           "title": "iRelief Medical Services",
@@ -160,19 +177,34 @@
     }
   ],
   "skills": {
+    "title": "Software engineering & web development",
     "languages": {
       "title": "Languages",
-      "advanced": [
-        "JavaScript",
-        "PHP",
-        "Python"
-      ],
-      "intermediate": [
-        "C#",
-        "C++"
-      ],
-      "beginner": [
-        "Go"
+      "levels": [
+        {
+          "name": "Advanced",
+          "stars": 4,
+          "languages":  [
+            "JavaScript",
+            "PHP",
+            "Python"
+          ]
+        },
+        {
+          "name": "Intermediate",
+          "stars": 3,
+          "languages": [
+            "C#",
+            "C++"
+          ]
+        },
+        {
+          "name": "Beginner",
+          "stars": 1,
+          "languages": [
+            "Rust"
+          ]
+        }
       ]
     },
     "web": {

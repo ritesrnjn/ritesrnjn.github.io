@@ -9,7 +9,7 @@ import headerMenu from '@/config/mainMenu.json'
 
 export default function Header(): React.JSX.Element {
   const [drawerOpen, setDrawerOpen] = useState(false)
-  const titleCls: string = 'items-center rounded-full py-2 px-2 ease-in-out text-gray-900 hover:bg-gray-100'
+  const titleCls: string = 'items-center rounded-full py-1.5 px-3 ease-in-out text-gray-900 hover:bg-gray-100'
 
   return (
     <>
