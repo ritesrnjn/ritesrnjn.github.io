@@ -1,6 +1,6 @@
 import {Dialog, Transition} from '@headlessui/react'
 import {Fragment} from 'react'
-import { XMarkIcon } from '@heroicons/react/20/solid'
+import {XMarkIcon} from '@heroicons/react/20/solid'
 
 interface DrawerProps {
   open: boolean

@@ -1,9 +1,9 @@
 'use client'
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import DropDownMenu from './DropDownMenu'
 import LeftDrawer from '@/components/Drawers/LeftDrawer'
 import MobileMainNav from './MobileMainNav'
-import { Bars2Icon } from '@heroicons/react/20/solid'
+import {Bars2Icon} from '@heroicons/react/20/solid'
 import headerMenu from '@/config/mainMenu.json'
 
 

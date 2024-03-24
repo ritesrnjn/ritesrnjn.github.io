@@ -1,9 +1,9 @@
-import resume from '@/config/resume.json';
-import Intro from '@/app/resume/Intro';
-import Education from '@/app/resume/Education';
-import Experience from '@/app/resume/Experience';
-import Skills from '@/app/resume/Skills';
-import Spare from '@/app/resume/SpareTime';
+import resume from '@/config/resume.json'
+import Intro from '@/app/resume/Intro'
+import Education from '@/app/resume/Education'
+import Experience from '@/app/resume/Experience'
+import Skills from '@/app/resume/Skills'
+import Spare from '@/app/resume/SpareTime'
 
 function Section({ title, children }) {
   return (

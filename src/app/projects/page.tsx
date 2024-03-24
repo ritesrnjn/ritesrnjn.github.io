@@ -1,6 +1,3 @@
-import Image from "next/image";
-import resume from '@/config/projects.json';
-
 export default function ProjectsPage() {
 
   return (

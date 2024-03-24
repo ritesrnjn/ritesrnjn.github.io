@@ -1,5 +1,5 @@
 import {Popover, Transition} from '@headlessui/react'
-import { ChevronUpIcon } from '@heroicons/react/20/solid'
+import {ChevronUpIcon} from '@heroicons/react/20/solid'
 import React, {Fragment} from 'react'
 import {HeaderMenuItem} from '@/types/header'
 

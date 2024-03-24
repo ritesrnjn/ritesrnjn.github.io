@@ -1,6 +1,6 @@
-import Image from "next/image";
+import Image from 'next/image'
 import Social from '@/components/Social'
-import resume from '@/config/resume.json';
+import resume from '@/config/resume.json'
 
 export default function Home() {
   const { name, about } = resume.contact;

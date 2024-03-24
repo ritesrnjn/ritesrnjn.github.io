@@ -2,7 +2,7 @@ import {Disclosure} from '@headlessui/react'
 import React from 'react'
 import {HeaderProps} from '@/types/header'
 import NextLink from 'next/link'
-import { ChevronUpIcon } from '@heroicons/react/20/solid'
+import {ChevronUpIcon} from '@heroicons/react/20/solid'
 
 export default function MobileMainNav({headerMenu}: HeaderProps) {
   const titleCls: string = 'items-center rounded-full py-2 px-2 ease-in-out text-gray-900'
