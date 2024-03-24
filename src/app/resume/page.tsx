@@ -1,38 +1,44 @@
-import resume from '@/config/resume.json'
-import Education from '@/app/resume/Education'
+import resume from '@/config/resume.json';
+import Intro from '@/app/resume/Intro';
+import Education from '@/app/resume/Education';
 import Experience from '@/app/resume/Experience';
-import Skills from '@/app/resume/Skills'
+import Skills from '@/app/resume/Skills';
+import Spare from '@/app/resume/SpareTime';
 
 function Section({ title, children }) {
   return (
-    <div className='mt-4 grid gap-6 grid-cols-1 md:grid-cols-12'>
-      <div className="col-span-1 md:col-span-2">
-        <h6 className="text-xl">
+    <div className="mt-4 grid gap-0 sm:gap-12 grid-cols-1 sm:grid-cols-12">
+      <div className="col-span-1 sm:col-span-2">
+        <h6 className="text-2xl text-green-600 font-light">
           {title}
         </h6>
       </div>
 
-      <div className='col-span-1 md:col-span-10'>
+      <div className="col-span-1 sm:col-span-10">
         {children}
       </div>
     </div>
-  )
+  );
 }
 
 export default function ResumePage() {
   const { contact, experience, education, skills, spare, personalDetails } = resume;
 
   return (
-    <div className="max-w-screen-md mx-auto my-6">
+    <div className="max-w-[960px] mx-auto my-12 px-4">
 
-      {/*  Intro */}
+      <Intro details={contact} />
+      <hr className='mb-10'/>
 
-      <Section title='Experience'>
+      <Section title="Summary">
+        TODO: fill this info in linked in too...
+      </Section>
+
+      <Section title="Experience">
         {experience.map((exp) => (
           <Experience key={exp.duration} exp={exp} />
         ))}
       </Section>
-
 
       <Section title="Education">
         {education.map((edu) => (
@@ -44,28 +50,28 @@ export default function ResumePage() {
         <Skills skills={skills} />
       </Section>
 
-      {/*<Section title="Spare Time">*/}
-      {/*  {spare.map((spare) => (*/}
-      {/*    <Spare key={spare.title} spare={spare} />*/}
-      {/*  ))}*/}
-      {/*</Section>*/}
+      <Section title="Spare Time">
+        {spare.map((spare) => (
+          <Spare key={spare.title} spare={spare} />
+        ))}
+      </Section>
 
       <Section title="Personal Details">
-          {personalDetails.map((d) => (
-            <div key={d.name}>
-              <div className='font-light'>
-                <span className='text-lg'>{d.name} –</span>
-                <span className='ml-2 text-xl'>{d.value}</span>
-              </div>
+        {personalDetails.map((d) => (
+          <div key={d.name}>
+            <div className="font-light">
+              <span className="text-lg">{d.name} –</span>
+              <span className="ml-2 text-xl">{d.value}</span>
             </div>
-          ))}
+          </div>
+        ))}
 
       </Section>
 
-      <hr style={{ marginTop: '2em' }} />
+      <hr className="mt-8" />
 
-      <div className='text-center'>
-        <div className='font-light mt-8 text-gray-400'>
+      <div className="text-center">
+        <div className="font-light mt-6 text-gray-400">
           last update: May 2022
           <br />
           online version: https://ranjanritesh.com/#/resume

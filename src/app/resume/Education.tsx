@@ -1,7 +1,5 @@
-import React from 'react';
 
 export default function Education({ edu }) {
-
   return (
     <div>
       <div className="inline">

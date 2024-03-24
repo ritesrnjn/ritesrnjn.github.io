@@ -13,7 +13,7 @@ export default function Header(): React.JSX.Element {
 
   return (
     <>
-      <nav className='border-gray-200'>
+      <nav className='border-gray-200 print:hidden'>
         <div className='flex flex-wrap items-center mx-auto px-1 md:px-4 py-1 min-h-12'>
           <button
             data-collapse-toggle="navbar-default"

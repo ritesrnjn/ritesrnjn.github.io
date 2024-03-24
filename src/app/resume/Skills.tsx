@@ -1,5 +1,3 @@
-import React from 'react';
-
 
 const StarIcon = ({ className }: { className?: string }) => (
   <svg className={className} focusable="false" viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
