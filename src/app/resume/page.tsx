@@ -4,8 +4,15 @@ import Education from '@/app/resume/Education'
 import Experience from '@/app/resume/Experience'
 import Skills from '@/app/resume/Skills'
 import Spare from '@/app/resume/SpareTime'
+import {Resume} from '@/types/resume'
+import type {Metadata} from 'next'
 
-function Section({title, children}) {
+export const metadata: Metadata = {
+  title: 'My Resume',
+  description: 'My Resume'
+}
+
+function Section({title, children}: {title: string, children: any}) {
   return (
     <div className='mt-4 grid gap-0 sm:gap-12 grid-cols-1 sm:grid-cols-12'>
       <div className='col-span-1 sm:col-span-2'>
@@ -22,7 +29,8 @@ function Section({title, children}) {
 }
 
 export default function ResumePage() {
-  const {contact, experience, education, skills, spare, personalDetails} = resume
+  const resumeData: Resume = resume
+  const {contact, experience, education, skills, spare, personalDetails} = resumeData
 
   return (
     <div className='max-w-[960px] mx-auto my-12 px-4'>

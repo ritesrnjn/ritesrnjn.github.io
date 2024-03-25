@@ -15,11 +15,6 @@ const GA4_ID = process.env.NODE_ENV === 'production'
   ? process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID_PROD
   : process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID_DEV
 
-export const metadata: Metadata = {
-  title: 'Ritesh Ranjan',
-  description: 'Personal Blog'
-}
-
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang='en'>

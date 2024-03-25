@@ -36,7 +36,7 @@ export default function DropDownMenu({menuItem}: { menuItem: HeaderMenuItem }): 
                 <div className='relative bg-white px-2 py-4'>
                   {menuItem.children?.map((item) => (
                     <a
-                      key={item.id}
+                      key={item.href}
                       href={item.href}
                       className='-m-3 flex mx-0.5 items-center rounded-full py-4 px-6 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none'
                     >

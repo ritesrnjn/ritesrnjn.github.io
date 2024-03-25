@@ -1,4 +1,6 @@
-export default function SpareTime({spare}) {
+import {SpareType} from '@/types/resume'
+
+export default function SpareTime({spare}: {spare: SpareType}) {
   return (
     <div className='mb-8'>
       <h3 className='text-lg'>

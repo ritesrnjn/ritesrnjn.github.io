@@ -1,4 +1,6 @@
-export default function Experience({exp}) {
+import {ExperienceType} from '@/types/resume'
+
+export default function Experience({exp}: {exp: ExperienceType}) {
   return (
     <div className='mb-8'>
       <div className='inline'>
@@ -15,7 +17,7 @@ export default function Experience({exp}) {
         <div className='mt-3' key={project.title}>
           <h3 className='text-xl font-light'>{project.title}</h3>
           <p className='font-light text-[15px]'>{project.description}</p>
-          {project.list?.map((project) => (
+          {project.techStack?.map((project) => (
             <div className='font-light ml-4' key={project}>
               {project}
             </div>

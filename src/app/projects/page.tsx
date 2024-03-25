@@ -1,6 +1,11 @@
-
 import Project from './Project';
 import projects from '@/config/projects.json'
+import type {Metadata} from 'next'
+
+export const metadata: Metadata = {
+  title: 'My Projects',
+  description: 'My Projects'
+}
 
 export default function ProjectsPage() {
   return (

@@ -1,6 +1,12 @@
 import Image from 'next/image'
 import Social from '@/components/Social'
 import resume from '@/config/resume.json'
+import type {Metadata} from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ritesh\'s blog ',
+  description: 'Personal Blog'
+}
 
 export default function Home() {
   const {name, about} = resume.contact

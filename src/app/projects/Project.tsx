@@ -1,5 +1,5 @@
-
-export default function Project({details}) {
+import {ProjectType} from '@/types/project'
+export default function Project({details}: { details: ProjectType }) {
 
   return (
     <div>
@@ -21,7 +21,7 @@ export default function Project({details}) {
 
             {details.homepageUrl && (
               <div>
-                <a href={details.homepage}> view homepage</a>
+                <a href={details.homepageUrl}> view homepage </a>
               </div>
             )}
 

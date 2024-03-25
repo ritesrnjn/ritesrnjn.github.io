@@ -1,4 +1,6 @@
-export default function Education({edu}) {
+import {EducationType} from '@/types/resume'
+
+export default function Education({edu}: {edu: EducationType}) {
   return (
     <div>
       <div className='inline'>
