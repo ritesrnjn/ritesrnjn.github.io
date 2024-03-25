@@ -3,8 +3,7 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  output: "export",
-  reactStrictMode: true,
+  output: "export"
 };
 
 export default nextConfig;
