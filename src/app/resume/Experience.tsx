@@ -17,11 +17,6 @@ export default function Experience({exp}: {exp: ExperienceType}) {
         <div className='mt-3' key={project.title}>
           <h3 className='text-xl font-light'>{project.title}</h3>
           <p className='font-light text-[15px]'>{project.description}</p>
-          {project.techStack?.map((project) => (
-            <div className='font-light ml-4' key={project}>
-              {project}
-            </div>
-          ))}
           <div className='font-light text-gray-500 ml-4 text-[15px]'>
             {project.techStack.join(' – ')}
           </div>
