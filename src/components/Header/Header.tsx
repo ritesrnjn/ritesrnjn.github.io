@@ -1,19 +1,21 @@
 'use client'
-import React, {useState} from 'react'
+import {useState} from 'react'
 import DropDownMenu from './DropDownMenu'
 import LeftDrawer from '@/components/Drawers/LeftDrawer'
 import MobileMainNav from './MobileMainNav'
 import {Bars2Icon} from '@heroicons/react/20/solid'
 import headerMenu from '@/config/mainMenu.json'
+import { usePathname } from 'next/navigation'
 
 
-export default function Header(): React.JSX.Element {
+export default function Header(){
+  const pathname = usePathname()
   const [drawerOpen, setDrawerOpen] = useState(false)
-  const titleCls: string = 'items-center rounded-full py-1.5 px-3 ease-in-out text-gray-900 hover:bg-gray-100'
+  const titleCls: string = 'items-center rounded-full py-1.5 px-3 ease-in-out hover:bg-gray-50 uppercase tracking-widest'
 
   return (
     <>
-      <nav className='border-gray-200 print:hidden'>
+      <nav className='border-gray-200 border border-t-4 border-t-green-500 print:hidden '>
         <div className='flex flex-wrap items-center mx-auto px-1 md:px-4 py-1 min-h-12'>
           <button
             data-collapse-toggle='navbar-default'
@@ -29,14 +31,14 @@ export default function Header(): React.JSX.Element {
           <div className='grow' />
           <div className='hidden w-full md:block md:w-auto' id='navbar-default'>
             <ul
-              className='flex flex-col items-baseline p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:border-0'>
+              className='flex flex-col items-baseline p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-4 md:mt-0 md:border-0'>
               {headerMenu.map(menuItem => (menuItem.children ? (
                 <DropDownMenu key={menuItem.title} menuItem={menuItem} />
               ) : (
                 <li key={menuItem.href}>
                   <a
                     href={menuItem.href}
-                    className={`block ${titleCls}`}>
+                    className={`block ${titleCls} ${pathname === menuItem.href ? 'text-green-600' : 'text-gray-600'}`}>
                     {menuItem.title}
                   </a>
                 </li>

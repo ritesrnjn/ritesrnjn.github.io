@@ -7,7 +7,7 @@ const StarIcon = ({className}: { className?: string }) => (
 const RatingStars = ({stars}: { stars: number }) => (
   <div className='flex'>
     {[...Array(5)].map((star, i) => (
-      <StarIcon key={`star-${i}`} className={`text-base ${i < stars ? 'fill-green-500' : 'fill-gray-400'}`} />
+      <StarIcon key={`star-${i}`} className={`text-base ${i < stars ? 'fill-green-500' : 'fill-gray-300'}`} />
     ))}
   </div>
 
@@ -18,14 +18,14 @@ export default function Skills(props) {
 
   return (
     <div>
-      <div className='text-xl'>
+      <h3 className='text-xl mb-1'>
         {skills.title}
-      </div>
+      </h3>
 
       {/* languages */}
       <div className='mb-4'>
         <div>
-          <h5 className='text-xl font-light'>
+          <h5 className='text-lg'>
             {skills.languages.title}
           </h5>
 
@@ -42,7 +42,7 @@ export default function Skills(props) {
       </div>
 
       <div className='mb-4'>
-        <div className='text-xl font-light'>
+        <div className='text-lg'>
           {skills.web.title}
         </div>
         {skills.web.tech.map((t) => (
@@ -55,7 +55,7 @@ export default function Skills(props) {
       </div>
 
       <div className='mb-4'>
-        <div className='text-xl font-light'>
+        <div className='text-lg'>
           {skills.other.title}
         </div>
         {skills.other.tech.map((t) => (

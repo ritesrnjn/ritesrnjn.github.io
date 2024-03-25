@@ -6,7 +6,7 @@ export default function Home() {
   const {name, about} = resume.contact
   return (
     <div className='flex flex-col items-center justify-center grow'>
-      <div className='relative w-auto h-auto overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600'>
+      <div className='overflow-hidden rounded-full'>
         <Image alt='ritesh_pic' width={190} height={190} src='/img/me.jpg' />
       </div>
 

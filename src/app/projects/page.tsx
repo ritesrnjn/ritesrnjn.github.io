@@ -1,8 +1,17 @@
-export default function ProjectsPage() {
 
+import Project from './Project';
+import projects from '@/config/projects.json'
+
+export default function ProjectsPage() {
   return (
-    <div className='max-w-screen-md mx-auto'>
-      <h2 className='items-center mb-8 text-2xl text-gray-800'>Projects</h2>
+    <div className='max-w-screen-lg mx-auto px-4 my-6'>
+      <h2 className='my-8 text-4xl text-green-600 font-light text-center'>
+        Projects
+      </h2>
+
+      {projects.map((p) => (
+        <Project key={p.id} details={p} />
+      ))}
 
     </div>
   )

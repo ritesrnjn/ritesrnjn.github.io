@@ -14,7 +14,7 @@ function Section({title, children}) {
         </h6>
       </div>
 
-      <div className='col-span-1 sm:col-span-10'>
+      <div className='col-span-1 sm:col-span-10 mt-1'>
         {children}
       </div>
     </div>
@@ -72,9 +72,9 @@ export default function ResumePage() {
 
       <div className='text-center'>
         <div className='font-light mt-6 text-gray-400'>
-          last update: May 2022
+          last update: March 2024
           <br />
-          online version: https://ranjanritesh.com/#/resume
+          online version: https://ranjanritesh.com/resume
         </div>
       </div>
 

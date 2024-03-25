@@ -1,5 +1,4 @@
 import {Disclosure} from '@headlessui/react'
-import React from 'react'
 import {HeaderProps} from '@/types/header'
 import NextLink from 'next/link'
 import {ChevronUpIcon} from '@heroicons/react/20/solid'
