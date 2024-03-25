@@ -8,7 +8,7 @@ export default function Project({details}) {
           <div className='col-span-1 sm:col-span-1'>
             <img className='rounded w-full border border-gray-100'
                  src={`/img/projects/${details.img}`}
-                 alt={details.id} 
+                 alt={details.id}
             />
           </div>
           <div className='col-span-1 sm:col-span-1'>
