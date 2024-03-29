@@ -2,7 +2,7 @@ import {SpareType} from '@/types/resume'
 
 export default function SpareTime({spare}: {spare: SpareType}) {
   return (
-    <div className='mb-8'>
+    <div className='mb-4'>
       <h3 className='text-lg'>
         {spare.title}
       </h3>

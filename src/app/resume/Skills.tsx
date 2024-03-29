@@ -18,7 +18,7 @@ const RatingStars = ({stars}: { stars: number }) => (
 export default function Skills({skills}: {skills: SkillsType}) {
 
   return (
-    <div>
+    <>
       <h3 className='text-xl mb-1'>
         {skills.title}
       </h3>
@@ -55,7 +55,7 @@ export default function Skills({skills}: {skills: SkillsType}) {
         ))}
       </div>
 
-      <div className='mb-4'>
+      <div>
         <div className='text-lg'>
           {skills.other.title}
         </div>
@@ -67,6 +67,6 @@ export default function Skills({skills}: {skills: SkillsType}) {
           </div>
         ))}
       </div>
-    </div>
+    </>
   )
 }

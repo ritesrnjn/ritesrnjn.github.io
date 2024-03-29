@@ -2,7 +2,7 @@ import {ExperienceType} from '@/types/resume'
 
 export default function Experience({exp}: {exp: ExperienceType}) {
   return (
-    <div className='mb-8'>
+    <div className='mb-6'>
       <div className='inline'>
         <span className='text-lg'>
           {exp.duration}
