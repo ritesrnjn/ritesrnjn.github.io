@@ -26,7 +26,7 @@ export default function Header() {
             onClick={() => setDrawerOpen(true)}
             aria-expanded='false'>
             <span className='sr-only'>Open main menu</span>
-            <Bars2Icon />
+            <Bars2Icon className='h-20 w-20 text-gray-800'/>
 
           </button>
           <div className='grow' />
