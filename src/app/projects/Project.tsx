@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import {ProjectType} from '@/types/project'
 export default function Project({details}: { details: ProjectType }) {
 
@@ -6,7 +7,7 @@ export default function Project({details}: { details: ProjectType }) {
       <div className='my-8'>
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-12'>
           <div className='col-span-1 sm:col-span-1'>
-            <img className='rounded w-full border border-gray-100'
+            <Image className='rounded w-full border border-gray-100' width={400} height={300}
                  src={`/img/projects/${details.img}`}
                  alt={details.id}
             />

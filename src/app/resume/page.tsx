@@ -33,7 +33,7 @@ export default function ResumePage() {
   const {contact, experience, education, skills, spare, personalDetails} = resumeData
 
   return (
-    <div className='max-w-[960px] mx-auto my-12 px-4'>
+    <div className='max-w-[960px] mx-auto my-12'>
 
       <Intro details={contact} />
       <hr className='mb-8' />

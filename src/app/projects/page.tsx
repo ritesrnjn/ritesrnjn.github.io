@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className='max-w-screen-lg mx-auto px-4 my-6'>
+    <div className='max-w-screen-lg mx-auto my-6'>
       <h2 className='my-8 text-4xl text-green-600 font-light text-center'>
         Projects
       </h2>
