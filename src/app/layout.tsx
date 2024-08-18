@@ -26,7 +26,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
     <html lang='en'>
     <head>
       <link rel='icon' href='/favicon.ico' sizes='any' />
-      <title> Ritesh's Blog </title>
+      <title> Ritesh&apos;s Blog </title>
     </head>
     <body className={roboto.className}>
     <div className='flex flex-col min-h-screen'>
