@@ -11,10 +11,10 @@
   "dependencies": {
     "@headlessui/react": "^2",
     "@heroicons/react": "^2",
-    "@next/third-parties": "^14",
+    "@next/third-parties": "^15.0.3",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14"
+    "next": "15.0.3"
   },
   "devDependencies": {
     "typescript": "^5",
@@ -25,6 +25,6 @@
     "postcss": "^8",
     "tailwindcss": "^3",
     "eslint": "^8",
-    "eslint-config-next": "14"
+    "eslint-config-next": "^15.0.3"
   }
 }

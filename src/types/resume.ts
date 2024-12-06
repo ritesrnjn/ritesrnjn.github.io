@@ -1,13 +1,12 @@
 export interface Resume {
-  contact: ContactType
-  experience: ExperienceType[]
-  education: EducationType[]
-  skills: SkillsType
-  spare: SpareType[]
-  personalDetails: PersonalDetailType[]
+  details: Details
+  summary: string
+  education: Education[]
+  skills: Skills
+  addExperiences: Project[]
 }
 
-export interface ContactType {
+export interface Details {
   name: string
   about: string
   designation: string
@@ -15,22 +14,29 @@ export interface ContactType {
   linkedIn: string
   website: string
   website_full: string
+  location: string
+  languages: string[],
+  interests: string[],
 }
 
-export interface ExperienceType {
+export interface Experience {
   duration: string
   designation: string
+  location: string
   company: string
-  projects: ProjectType[]
+  logo: string
+  projects: Project[]
 }
 
-export interface ProjectType {
-  title: string
+export interface Project {
+  role: string
+  name: string
   techStack: string[]
-  description: string
+  description: string[]
+  repo?: string
 }
 
-export interface EducationType {
+export interface Education {
   begin: string
   end: string
   degree: string
@@ -40,42 +46,24 @@ export interface EducationType {
   location: string
 }
 
-export interface SkillsType {
+export interface Skills {
   title: string
-  languages: LanguagesType
-  web: WebType
-  other: OtherType
+  languages: {
+    title: string
+    levels: Level[]
+  }
+  web: {
+    title: string
+    tech: string[][]
+  }
+  other: {
+    title: string
+    tech: string[][]
+  }
 }
 
-export interface LanguagesType {
-  title: string
-  levels: LevelType[]
-}
-
-export interface LevelType {
+export interface Level {
   name: string
   stars: number
   languages: string[]
-}
-
-export interface WebType {
-  title: string
-  tech: string[][]
-}
-
-export interface OtherType {
-  title: string
-  tech: string[][]
-}
-
-export interface SpareType {
-  title: string
-  desc: string
-  repo?: string
-  stack?: string[]
-}
-
-export interface PersonalDetailType {
-  name: string
-  value: string
 }

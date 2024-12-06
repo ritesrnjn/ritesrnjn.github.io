@@ -1,170 +1,25 @@
 {
-  "contact": {
+  "details": {
     "name": "Ritesh Ranjan",
     "about": "Designer, developer, painter, and overall a pretty nice guy",
     "designation": "Full Stack Developer",
     "email": "ritesrnjn@gmail.com",
     "linkedIn": "linkedin.com/in/ritesrnjn",
     "website": "riteshranjan.com",
-    "website_full": "https://ranjanritesh.com"
+    "website_full": "https://ranjanritesh.com",
+    "location": "Barcelona, Spain",
+    "languages": [
+      "English, Hindi & Spanish"
+    ],
+    "interests": [
+      "Sketching",
+      "Electronics",
+      "Swimming",
+      "Cycling",
+      "Outdoor Activities"
+    ]
   },
-  "experience": [
-    {
-      "duration": "2023 - Now",
-      "designation": "IT and Process Specialist",
-      "company": "Allianz Technology, Barcelona",
-      "projects": [
-        {
-          "title": "Internal Project",
-          "techStack": [
-            "SAML",
-            "Jenkins",
-            "Angular",
-            "Allianz Tools"
-          ],
-          "description": "Developing an enterprise application to be used withing the organisation."
-        }
-      ]
-    },
-    {
-      "duration": "2022 - 2023",
-      "designation": "Senior Consultant",
-      "company": "Deloitte Digital, Bangalore",
-      "projects": [
-        {
-          "title": "Customer Care Backlog Management Tool",
-          "techStack": [
-            "Octa SAML",
-            "Docker",
-            "Teamcity",
-            "Kubernetes",
-            "AWS Lambda",
-            "RDS/Postgres",
-            "NodeJS",
-            "GraphQL",
-            "Prisma",
-            "React",
-            "Material-UI"
-          ],
-          "description": "This tool fetches data from SAP HANA using lambda function and stores it in a Postgres DB. The NodeJS app using Prisma ORM serves data through GraphQL APIs. FE React app displays data in the form of multiple charts and tables."
-        }
-      ]
-    },
-    {
-      "duration": "2018 – 2021",
-      "designation": "Consultant",
-      "company": "Deloitte Digital, Bangalore",
-      "projects": [
-        {
-          "title": "Ecommerce Application",
-          "techStack": [
-            "Angular",
-            "SASS",
-            "NodeJS",
-            "CyberSource",
-            "Elastic Path"
-          ],
-          "description": "An online marketplace for selling life science products."
-        },
-        {
-          "title": "Quoting tool",
-          "techStack": [
-            "Hybris",
-            "React",
-            "SASS"
-          ],
-          "description": "A quote generation tool for consumption-based IT solutions. Backend services have been created using SAP Hybris while react has been used in client side."
-        },
-        {
-          "title": "Production Lines Tracker",
-          "techStack": [
-            "Thingworx",
-            "React",
-            "JSS"
-          ],
-          "description": "A complete IoT solution for end to end monitoring of production lines in manufacturing unit. It uses Thingworx IoT platform for receiving data from on-site sensors, processing & storing the collected data and show the required information."
-        },
-        {
-          "title": "Dynamic Vehicle Router",
-          "techStack": [
-            "Python",
-            "React",
-            "Redux",
-            "NodeJS"
-          ],
-          "description": "It provides solution for finding optimal path for vehicle visiting multiple locations. The application provided features like authentication, customization of various constraints & display the list of generated solutions."
-        }
-      ]
-    },
-    {
-      "duration": "2016 – 2018",
-      "designation": "Business Technology Analyst",
-      "company": "Deloitte Digital, Bangalore",
-      "projects": [
-        {
-          "title": "Citizen's Services Portal",
-          "techStack": [
-            "React",
-            "Redux",
-            "NodeJS",
-            "JSS"
-          ],
-          "description": "The Project provides a digital medium to citizens in need to access government services. The front-end application consists of hundreds of forms which were generated dynamically using json files. A react component library contains all the unique components and assembled them to create different views and pages."
-        },
-        {
-          "title": "Virtual Health Assistant",
-          "techStack": [
-            "Angular 9",
-            "Node",
-            "Pug",
-            "SASS",
-            "Socket.io"
-          ],
-          "description": "App has 3 layers – Client using angular, Socket Service to listen to any incoming request (Socket Layer) and Node Layer at the back which intercepts any requests coming in from the socket and send them to the model which makes actual service call or process datawhich is then returned to the client for injection.The entire app was configurable using a config file (without rebuilding the app). All data werehosted on a CMS. We targeted 3 languages with 3 different requirements using the same code base."
-        }
-      ]
-    },
-    {
-      "duration": "2014 – 2016",
-      "designation": "Software Developer",
-      "company": "Cretechs, Bangalore",
-      "projects": [
-        {
-          "title": "iRelief Medical Services",
-          "description": "iRelief Services Private Limited is an Aggregator for Healthcare Services. iRelief provides innovative technology solution based services in the domain of healthcare ranging from ambulance, blood bank, homecare and pharmacy services.",
-          "techStack": [
-            "Python3",
-            "Django",
-            "Celery",
-            "Angular 5",
-            "NodeJS",
-            "GCM"
-          ]
-        },
-        {
-          "title": "Mojojo",
-          "techStack": [
-            "PHP",
-            "Laravel",
-            "AngularJS",
-            "MySQL",
-            "Redis"
-          ],
-          "description": "MOJOJO is a marketplace which connects people with Salons, Spas, Tattoo Studios & Stylists. It has a REST based architecture."
-        },
-        {
-          "title": "Malvern",
-          "techStack": [
-            "PHP",
-            "Wordpress",
-            "JavaScript",
-            "MySQL"
-          ],
-          "description": "Malvern Engineering was established in June 1947, as a general engineering shop, servicing the mining industry."
-        }
-      ]
-    }
-  ],
+  "summary": "Seasoned full stack developer with 10 years of experience, expert in Web Development.",
   "education": [
     {
       "begin": "2010",
@@ -215,25 +70,28 @@
           "Celery",
           "MySql",
           "Redis",
-          "SQLite"
+          "SQLite",
+          "PostgreSQL",
+          "Wordpress"
         ],
         [
-          "jQuery",
           "React",
-          "Redux",
-          "AngularJS",
           "Angular",
           "Node.js",
+          "jQuery",
+          "Redux",
+          "AngularJS",
           "Express"
         ],
         [
           "HTML5",
-          "Pug",
           "CSS3",
-          "Sass",
+          "Scss",
+          "TailwindCSS",
           "Bootstrap",
           "JSS",
-          "MaterialUI"
+          "MaterialUI",
+          "Pug"
         ],
         [
           "PHP",
@@ -260,33 +118,36 @@
           "Photoshop"
         ],
         [
+          "IntelliJ IDEs",
           "VSCode",
-          "Atom",
-          "Notepad++",
+          "Sublime Text",
           "Visual Studio",
-          "IntelliJ IDEs"
+          "Notepad++"
         ]
       ]
     }
   },
-  "spare": [
+  "addExperiences": [
     {
-      "title": "API Docs",
-      "desc": "API Docs was created to maintain APIs for other projects I was working on. This is an alternate to swagger editor to create and store APIs. Instead of writing YAML codes, all I had to do was to fill a simple CRUD form.",
-      "repo": "github.com/ritesrnjn/api_docs",
-      "stack": [
-        "PHP",
-        "JavaScript",
-        "Bootstrap",
-        "SQLite",
-        "MySQL"
+      "name": "MedicalNEETPG",
+      "role": "",
+      "description": [],
+      "techStack": [
       ]
     },
     {
-      "title": "DoctorLive",
-      "desc": "This project is an attempt to bridge the communication gap between doctors, patients and chemists. Patients are provided with a mobile app through which they can take appointments, receive reports, receive health notifications and much more. This project was selected at Microsoft //publish/ 2014 event for National Finals.",
+      "name": "DoctorLive",
+      "role": "",
+      "description": [
+        "DoctorLive is my final year college project.",
+        "We aimed to bridge the communication gap between doctors, patients and chemists.",
+        "Patients are provided with a mobile app through which they can book appointments, receive reports, receive health reminders and connect with doctors.",
+        "Doctors & hospitals have an Azure dashboard by which they can send the health reports and connect with patients digitally.",
+        "Chemists receive the list of medicines direcly from hospital and deliver them to patient.",
+        "This project was selected at Microsoft //publish/ 2014 event at Bangalore for National Finals."
+      ],
       "repo": "github.com/ritesrnjn/docLiveWebApp",
-      "stack": [
+      "techStack": [
         "Microsoft Azure",
         "C#",
         "XAML",
@@ -297,22 +158,20 @@
       ]
     },
     {
-      "title": "Interests",
-      "desc": "Sketching, Electronics, Hindi Literature, Philosophy"
-    }
-  ],
-  "personalDetails": [
-    {
-      "name": "DOB",
-      "value": "Jan 5th, 1993"
-    },
-    {
-      "name": "Nationality",
-      "value": "Indian"
-    },
-    {
-      "name": "Languages",
-      "value": "English, Hindi & Spanish"
+      "name": "API Docs",
+      "role": "",
+      "description": [
+        "API Docs was created to maintain APIs for other projects I was working on.",
+        "This is an alternate to swagger editor to create and store APIs. Instead of writing YAML codes, all I had to do was to fill a simple CRUD form."
+      ],
+      "repo": "github.com/ritesrnjn/api_docs",
+      "techStack": [
+        "PHP",
+        "JavaScript",
+        "Bootstrap",
+        "SQLite",
+        "MySQL"
+      ]
     }
   ]
 }

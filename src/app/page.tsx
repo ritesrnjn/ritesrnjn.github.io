@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  const {name, about} = resume.contact
+  const {name, about} = resume.details
   return (
     <>
       <div className='overflow-hidden rounded-full'>

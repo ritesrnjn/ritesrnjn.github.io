@@ -1,4 +1,4 @@
-import {SkillsType} from '@/types/resume'
+import {Skills} from '@/types/resume'
 
 const StarIcon = ({className}: { className?: string }) => (
   <svg className={className} focusable='false' viewBox='0 0 24 24' aria-hidden='true' width='24' height='24'>
@@ -12,10 +12,11 @@ const RatingStars = ({stars}: { stars: number }) => (
       <StarIcon key={`star-${i}`} className={`text-base ${i < stars ? 'fill-green-500' : 'fill-gray-300'}`} />
     ))}
   </div>
-
 )
 
-export default function Skills({skills}: {skills: SkillsType}) {
+
+
+export default function SkillsSection({skills}: {skills: Skills}) {
 
   return (
     <>
@@ -33,9 +34,9 @@ export default function Skills({skills}: {skills: SkillsType}) {
           {skills.languages.levels.map(level => (
             <div key={level.name} className='flex width-full'>
               <RatingStars stars={level.stars} />
-              <p className='text-lg font-light ml-4'>
+              <div className='text-lg font-light ml-4'>
                 {level.languages.join(', ')}
-              </p>
+              </div>
             </div>
           ))}
 
@@ -46,11 +47,9 @@ export default function Skills({skills}: {skills: SkillsType}) {
         <div className='text-lg'>
           {skills.web.title}
         </div>
-        {skills.web.tech.map((t) => (
-          <div key={t[0]}>
-            <div className='text-lg font-light'>
-              {t.join(' – ')}
-            </div>
+        {skills.web.tech.map((t:string[]) => (
+          <div className='text-lg font-light' key={t[0]}>
+            {t.join(' – ')}
           </div>
         ))}
       </div>
@@ -60,10 +59,8 @@ export default function Skills({skills}: {skills: SkillsType}) {
           {skills.other.title}
         </div>
         {skills.other.tech.map((t) => (
-          <div key={t[0]}>
-            <div className='text-lg font-light'>
-              {t.join(' – ')}
-            </div>
+          <div className='text-lg font-light' key={t[0]}>
+            {t.join(' – ')}
           </div>
         ))}
       </div>

@@ -11,13 +11,9 @@ const roboto = Roboto({
   display: 'swap'
 })
 
-const GA4_ID = process.env.NODE_ENV === 'production'
-  ? process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID_PROD
-  : process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID_DEV
-
 export const metadata = {
   icons: {
-    icon: '/fav.ico',
+    icon: '/favicon.ico',
   },
 };
 
@@ -36,7 +32,9 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
       </div>
     </div>
     </body>
-    <GoogleAnalytics gaId={GA4_ID || ''} />
+    {process.env.NODE_ENV === 'production' && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA4_ID || ''} />
+    )}
     </html>
   )
 }

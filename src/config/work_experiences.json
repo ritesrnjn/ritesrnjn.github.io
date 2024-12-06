@@ -1,0 +1,208 @@
+[
+  {
+    "duration": "January 2023 - Now",
+    "designation": "IT and Process Specialist",
+    "company": "Allianz Technology",
+    "logo": "allianz.png",
+    "location": "Barcelona, Spain",
+    "projects": [
+      {
+        "role": "Full Stack Developer",
+        "name": "Internal Project",
+        "description": [
+          "Developing an enterprise application to be used withing the organisation."
+        ],
+        "techStack": [
+          "SAML",
+          "Jenkins",
+          "Angular",
+          "Kafka",
+          "Postgres",
+          "Allianz Tools"
+        ]
+      }
+    ]
+  },
+  {
+    "duration": "May 2022 - December 2023",
+    "designation": "Senior Consultant",
+    "company": "Deloitte Digital",
+    "logo": "deloitte.svg",
+    "location": "Bangalore, India",
+    "projects": [
+      {
+        "role": "Full Stack Developer",
+        "name": "Customer Care Backlog Management Tool",
+        "description": [
+          "This tool fetches data from SAP HANA using lambda function and stores it in a Postgres DB.",
+          "FE React app displays data in the form of multiple charts and tables.",
+          "The NodeJS app using Prisma ORM serves data through GraphQL APIs."
+        ],
+        "techStack": [
+          "React",
+          "Material-UI",
+          "Prisma",
+          "GraphQL",
+          "NodeJS",
+          "Octa SAML",
+          "RDS/Postgres",
+          "Docker",
+          "Teamcity",
+          "Kubernetes",
+          "AWS Lambda"
+        ]
+      }
+    ]
+  },
+  {
+    "duration": "May 2018 – April 2021",
+    "designation": "Consultant",
+    "company": "Deloitte Digital",
+    "logo": "deloitte.svg",
+    "location": "Bangalore, India",
+    "projects": [
+      {
+        "name": "Ecommerce Application",
+        "role": "Full Stack Developer",
+        "description": [
+          "An online marketplace for selling life science products."
+        ],
+        "techStack": [
+          "Angular",
+          "SASS",
+          "NodeJS",
+          "CyberSource",
+          "Elastic Path"
+        ]
+      },
+      {
+        "name": "Quoting tool",
+        "role": "Full Stack Developer",
+        "description": [
+          "A quote generation tool for consumption-based IT solutions.",
+          "Backend services have been created using SAP Hybris while react has been used in client side."
+        ],
+        "techStack": [
+          "Hybris",
+          "React",
+          "SASS"
+        ]
+      },
+      {
+        "name": "Production Lines Tracker",
+        "role": "Full Stack Developer",
+        "description": [
+          "A complete IoT solution for end to end monitoring of production lines in manufacturing unit.",
+          "It uses Thingworx IoT platform for receiving data from on-site sensors, processing & storing the collected data and show the required information."
+        ],
+        "techStack": [
+          "Thingworx",
+          "React",
+          "JSS"
+        ]
+      },
+      {
+        "name": "Dynamic Vehicle Router",
+        "role": "Full Stack Developer",
+        "description": [
+          "It provides solution for finding optimal path for vehicle visiting multiple locations.",
+          "The application provided features like authentication, customization of various constraints & display the list of generated solutions."
+        ],
+        "techStack": [
+          "Python",
+          "React",
+          "Redux",
+          "NodeJS"
+        ]
+      }
+    ]
+  },
+  {
+    "duration": "August 2016 – April 2018",
+    "designation": "Business Technology Analyst",
+    "company": "Deloitte Digital",
+    "logo": "deloitte.svg",
+    "location": "Bangalore, India",
+    "projects": [
+      {
+        "name": "Citizen's Services Portal",
+        "role": "Full Stack Developer",
+        "description": [
+          "The Project provides a digital medium to citizens in need to access government services.",
+          "A react component library contains all the unique components and assembled them to create different views and pages.",
+          "The front-end application consists of hundreds of forms which were generated dynamically using json files."
+        ],
+        "techStack": [
+          "React",
+          "Redux",
+          "NodeJS",
+          "JSS"
+        ]
+      },
+      {
+        "name": "Virtual Health Assistant",
+        "role": "Full Stack Developer",
+        "description": [
+          "App has 3 layers – Client using angular, Socket Service to listen to any incoming request (Socket Layer) and Node Layer at the back which intercepts any requests coming in from the socket and send them to the model which makes actual service call or process data which is then returned to the client for injection.",
+          "We targeted 3 languages with 3 different requirements using the same code base.",
+          "The entire app was configurable using a config file (without rebuilding the app). All data were hosted on a CMS."
+        ],
+        "techStack": [
+          "Angular 9",
+          "Node",
+          "Pug",
+          "SASS",
+          "Socket.io"
+        ]
+      }
+    ]
+  },
+  {
+    "duration": "2014 – 2016",
+    "designation": "Consultant/Freelance",
+    "company": "Cretechs",
+    "logo": "cretechs.svg",
+    "location": "Bangalore, India",
+    "projects": [
+      {
+        "name": "iRelief Medical Services",
+        "role": "Full Stack Developer",
+        "description": [
+          "iRelief services is an aggregator for healthcare services ranging from ambulance, blood bank, home-care and pharmacy."
+        ],
+        "techStack": [
+          "Python3",
+          "Django",
+          "Celery",
+          "Firebase",
+          "GCM",
+          "Angular 5",
+          "NodeJS"
+        ]
+      },
+      {
+        "name": "Mojojo",
+        "role": "Full Stack Developer",
+        "techStack": [
+          "PHP",
+          "Laravel",
+          "AngularJS",
+          "MySQL",
+          "Redis"
+        ],
+        "description": ["MOJOJO is a marketplace which connects people with Salons, Spas, Tattoo Studios & Stylists. It has a REST based architecture."]
+      },
+      {
+        "name": "Malvern Engineering",
+        "role": "Full Stack Developer",
+        "techStack": [
+          "PHP",
+          "Wordpress",
+          "JavaScript",
+          "MySQL"
+        ],
+        "description": ["Malvern Engineering was established in June 1947, as a general engineering shop, servicing the mining industry."]
+      }
+    ]
+  }
+]
