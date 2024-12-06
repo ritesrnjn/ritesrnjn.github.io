@@ -1,16 +1,13 @@
 {
   "details": {
     "name": "Ritesh Ranjan",
+    "roles": ["Full Stack Developer", "Software Architecture", "UI/UX"],
     "about": "Designer, developer, painter, and overall a pretty nice guy",
-    "designation": "Full Stack Developer",
     "email": "ritesrnjn@gmail.com",
     "linkedIn": "linkedin.com/in/ritesrnjn",
     "website": "riteshranjan.com",
     "website_full": "https://ranjanritesh.com",
     "location": "Barcelona, Spain",
-    "languages": [
-      "English, Hindi & Spanish"
-    ],
     "interests": [
       "Sketching",
       "Electronics",
@@ -19,16 +16,30 @@
       "Outdoor Activities"
     ]
   },
+  "languages": [
+    {
+      "name": "English",
+      "level": "Advanced",
+      "score": 5
+    },
+    {
+      "name": "Hindi",
+      "level": "Native",
+      "score": 5
+    },
+    {
+      "name": "Spanish",
+      "level": "Beginner",
+      "score": 2
+    }
+  ],
   "summary": "Seasoned full stack developer with 10 years of experience, expert in Web Development.",
   "education": [
     {
-      "begin": "2010",
-      "end": "2014",
-      "degree": "BE",
-      "stream": "Computer Science & Engineering",
-      "school": "CMR Institute of Technology",
-      "university": "Visvesvaraya Technological University",
-      "location": "Bangalore"
+      "degree": "Bachelor of Engineering in Computer Science",
+      "institute": "Visvesvaraya Technological University",
+      "duration": "2010 - 2014",
+      "location": "Bangalore, India"
     }
   ],
   "skills": {
@@ -130,14 +141,14 @@
   "addExperiences": [
     {
       "name": "MedicalNEETPG",
-      "role": "",
+      "role": "Principal software developer",
       "description": [],
       "techStack": [
       ]
     },
     {
       "name": "DoctorLive",
-      "role": "",
+      "role": "Student Developer",
       "description": [
         "DoctorLive is my final year college project.",
         "We aimed to bridge the communication gap between doctors, patients and chemists.",
@@ -146,7 +157,7 @@
         "Chemists receive the list of medicines direcly from hospital and deliver them to patient.",
         "This project was selected at Microsoft //publish/ 2014 event at Bangalore for National Finals."
       ],
-      "repo": "github.com/ritesrnjn/docLiveWebApp",
+      "repo": "https://github.com/ritesrnjn/docLiveWebApp",
       "techStack": [
         "Microsoft Azure",
         "C#",
@@ -164,7 +175,7 @@
         "API Docs was created to maintain APIs for other projects I was working on.",
         "This is an alternate to swagger editor to create and store APIs. Instead of writing YAML codes, all I had to do was to fill a simple CRUD form."
       ],
-      "repo": "github.com/ritesrnjn/api_docs",
+      "repo": "https://github.com/ritesrnjn/api_docs",
       "techStack": [
         "PHP",
         "JavaScript",

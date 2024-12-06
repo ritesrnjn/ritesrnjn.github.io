@@ -3,19 +3,23 @@ export interface Resume {
   summary: string
   education: Education[]
   skills: Skills
+  languages: {
+    name: string
+    level: string
+    score: number
+  }[],
   addExperiences: Project[]
 }
 
 export interface Details {
   name: string
   about: string
-  designation: string
+  roles: string[]
   email: string
   linkedIn: string
   website: string
   website_full: string
   location: string
-  languages: string[],
   interests: string[],
 }
 
@@ -37,12 +41,9 @@ export interface Project {
 }
 
 export interface Education {
-  begin: string
-  end: string
+  duration: string
   degree: string
-  stream: string
-  school: string
-  university: string
+  institute: string
   location: string
 }
 

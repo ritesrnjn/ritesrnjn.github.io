@@ -1,10 +1,10 @@
-import {Roboto} from 'next/font/google'
+import {Inter} from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import React from 'react'
 
-const roboto = Roboto({
+const roboto = Inter({
   weight: ['300', '400', '500'],
   style: ['normal', 'italic'],
   subsets: ['latin'],

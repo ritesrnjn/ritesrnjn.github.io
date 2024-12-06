@@ -1,22 +1,88 @@
+import type {Metadata} from 'next'
+import Link from 'next/link'
+import {AtSymbolIcon, LinkIcon, MapPinIcon, UserIcon} from '@heroicons/react/24/outline'
 import resumeData from '@/config/resume.json'
 import workExperiencesData from '@/config/work_experiences.json'
 import Experience from '@/app/resume/Experience'
 import Skills from '@/app/resume/Skills'
-import AddExperience from '@/app/resume/AddExperience'
-import {Details, Education as EducationType, Resume, Experience as ExperienceType } from '@/types/resume'
-import type {Metadata} from 'next'
-import {AtSymbolIcon, LinkIcon, MapPinIcon, UserIcon} from '@heroicons/react/24/outline'
-import Link from 'next/link'
+import {
+  Details,
+  Education as EducationType,
+  Resume,
+  Experience as ExperienceType,
+  Project as ProjectType
+} from '@/types/resume'
+import {Language} from './Language'
 
 export const metadata: Metadata = {
   title: 'My Resume',
   description: 'My Resume'
 }
 
-function Section({title, children}: {title: string, children: any}) {
+export default function ResumePage() {
+  const resume: Resume = resumeData
+
+  return (
+    <div className='max-w-screen-xl mx-auto my-12'>
+      <Intro details={resume.details}/>
+      <div className='mt-4 mb-6 grid gap-4 grid-cols-1 sm:grid-cols-12'>
+        <div className='col-span-1 sm:col-span-7'>
+          <LeftSection resume={resume}/>
+        </div>
+        <div className='col-span-1 sm:col-span-5'>
+          <RightSection resume={resume}/>
+        </div>
+      </div>
+      <Footer/>
+    </div>
+  )
+}
+
+function LeftSection({resume}: { resume: Resume }) {
+  const workExperiences: ExperienceType[] = workExperiencesData
+  return (
+    <>
+      <Section title='Summary'>
+        <p className='mb-2 font-light'>{resume.summary}</p>
+      </Section>
+      <Section title='Experience'>
+        {workExperiences.map((exp) => (
+          <Experience key={exp.duration} exp={exp}/>
+        ))}
+      </Section>
+      <Section title='Additional Experiences'>
+        {resume.addExperiences.map((exp) => (
+          <AddExperience key={exp.name} project={exp}/>
+        ))}
+      </Section>
+    </>
+  )
+}
+
+function RightSection({resume}: { resume: Resume }) {
+  return (
+    <>
+      <Section title='Education'>
+        {resume.education.map((edu) => (
+          <Education key={edu.duration} edu={edu}/>
+        ))}
+      </Section>
+      <Section title='Skills'>
+        <Skills skills={resume.skills}/>
+      </Section>
+      <Section title='Languages'>
+        {resume.languages.map(language => (
+          <Language key={language.name} name={language.name} level={language.level} score={language.score} />
+        ))}
+      </Section>
+    </>
+  )
+}
+
+function Section({title, children}: { title: string, children: any }) {
   return (
     <div className='mb-6'>
-      <h6 className='text-md text-gray-400 uppercase tracking-wide mb-1'>
+      <h6 className='text-md text-gray-500 uppercase tracking-wide mb-1'>
         {title}
       </h6>
 
@@ -27,71 +93,19 @@ function Section({title, children}: {title: string, children: any}) {
   )
 }
 
-export default function ResumePage() {
-  const resume: Resume = resumeData
-  const workExperiences: ExperienceType[] = workExperiencesData
-
-  return (
-    <div className='max-w-screen-lg mx-auto my-12'>
-
-      <Intro details={resume.details}/>
-
-      <div className='mt-4 mb-6 grid gap-8 grid-cols-1 sm:grid-cols-12 '>
-        <div className='col-span-1 sm:col-span-8'>
-          <Section title='Summary'>
-            <p className='mb-2 font-light'>{resume.summary}</p>
-          </Section>
-          <Section title='Experience'>
-            {workExperiences.map((exp) => (
-              <Experience key={exp.duration} exp={exp} />
-            ))}
-          </Section>
-          <Section title='Additional Experiences'>
-            {resume.addExperiences.map((exp) => (
-              <AddExperience key={exp.name} spare={exp}/>
-            ))}
-          </Section>
-        </div>
-
-        <div className='col-span-1 sm:col-span-4'>
-          <Section title='Education'>
-            {resume.education.map((edu) => (
-              <Education key={edu.begin} edu={edu}/>
-            ))}
-          </Section>
-          <Section title='Skills'>
-            <Skills skills={resume.skills}/>
-          </Section>
-          <Section title='Languages'>
-            <div className='font-light'>
-              English - Advanced<br/>
-              Hindi - Native<br/>
-              Spanish - Basic
-              <span className='ml-2 text-xl'>{resume.details.languages.join(', ')}</span>
-            </div>
-          </Section>
-        </div>
-      </div>
-
-      <Footer/>
-
-    </div>
-  )
-}
-
 function Intro({details}: { details: Details }) {
   const classes = {
-    item: 'flex items-center text-gray-600 mr-3',
+    item: 'flex items-center text-gray-600 text-lg mr-3',
     icon: 'size-4 mr-0.5'
   }
 
   return (
     <div className='mb-6'>
-      <h1 className='font-light text-5xl text-green-600'>
+      <h1 className='font text-5xl text-fuchsia-950 mb-3'>
         {details.name}
       </h1>
-      <div className='font-light text-xl tracking-wide ml-0.5'>
-        {details.designation}
+      <div className='text-2xl text-fuchsia-950 ml-0.5 mb-1'>
+        {details.roles.join(' | ')}
       </div>
       <div className='block sm:flex font-light'>
         <div className={classes.item}>
@@ -114,24 +128,37 @@ function Intro({details}: { details: Details }) {
   )
 }
 
-function Education({edu}: {edu: EducationType}) {
+function Education({edu}: { edu: EducationType }) {
   return (
     <div>
-      <div className='inline'>
-        <span className='text-lg'>
-          {edu.begin} to {edu.end}
-        </span>
-        <span className='ml-4 text-xl font-light'>
-          {edu.degree} in {edu.stream}
-        </span>
+      <div className=''>
+        <div className='text-xl font-normal text-fuchsia-950'>
+          {edu.degree}
+        </div>
       </div>
 
-      <div className='text-lg font-light'>
-        {edu.school},
+      <div className='text-lg font-normal text-fuchsia-950'>
+        {edu.institute}
       </div>
-      <div className='text-lg font-light'>
-        {edu.university}, {edu.location}
+      <div className='text-lg font-thin text-gray-500'>
+        <span className='mr-4'> {edu.duration}</span>
+        <span className=''>{edu.location}</span>
       </div>
+    </div>
+  )
+}
+
+function AddExperience({project}: { project: ProjectType }) {
+  return (
+    <div className='mt-3'>
+      <h3 className='text-lg font-light'>{project.name}</h3>
+      <ul className='text-gray-500 font-light list-disc ml-4'>
+        {project.description.map((desc, i) => (
+          <li key={`${project.name}-${i}`}>{desc}&nbsp;</li>
+        ))}
+        <li>{project.repo}</li>
+        <li>{project.techStack.join(', ')}</li>
+      </ul>
     </div>
   )
 }

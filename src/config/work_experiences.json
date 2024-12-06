@@ -190,7 +190,9 @@
           "MySQL",
           "Redis"
         ],
-        "description": ["MOJOJO is a marketplace which connects people with Salons, Spas, Tattoo Studios & Stylists. It has a REST based architecture."]
+        "description": [
+          "MOJOJO is a marketplace which connects people with Salons, Spas, Tattoo Studios & Stylists. It has a REST based architecture."
+        ]
       },
       {
         "name": "Malvern Engineering",
@@ -201,7 +203,9 @@
           "JavaScript",
           "MySQL"
         ],
-        "description": ["Malvern Engineering was established in June 1947, as a general engineering shop, servicing the mining industry."]
+        "description": [
+          "Malvern Engineering was established in June 1947, as a general engineering shop, servicing the mining industry."
+        ]
       }
     ]
   }

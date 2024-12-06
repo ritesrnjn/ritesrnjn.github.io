@@ -9,14 +9,27 @@ const StarIcon = ({className}: { className?: string }) => (
 const RatingStars = ({stars}: { stars: number }) => (
   <div className='flex'>
     {[...Array(5)].map((star, i) => (
-      <StarIcon key={`star-${i}`} className={`text-base ${i < stars ? 'fill-green-500' : 'fill-gray-300'}`} />
+      <StarIcon key={`star-${i}`} className={`text-base ${i < stars ? 'fill-fuchsia-950' : 'fill-gray-300'}`} />
+    ))}
+  </div>
+)
+
+const CircleIcon = ({className}: { className?: string }) => (
+  <svg className={className} focusable='false' viewBox='0 0 24 24' aria-hidden='true' width='24' height='24'>
+    <circle cx='8' cy='8' r='8' fill='#000000'/>
+  </svg>
+)
+
+const RatingCircles = ({stars}: { stars: number }) => (
+  <div className='flex'>
+    {[...Array(5)].map((star, i) => (
+      <CircleIcon key={`star-${i}`} className={`text-base ${i < stars ? 'fill-fuchsia-950' : 'fill-gray-300'}`} />
     ))}
   </div>
 )
 
 
-
-export default function SkillsSection({skills}: {skills: Skills}) {
+export default function SkillsSection({skills}: { skills: Skills }) {
 
   return (
     <>
