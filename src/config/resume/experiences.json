@@ -70,7 +70,7 @@
         "name": "Ecommerce Application",
         "role": "Full Stack Developer",
         "description": [
-          "Implemented an online marketplace for a US based MNC to sell life science products."
+          "Developed an online marketplace for a US-based MNC specializing in life-science products."
         ],
         "techStack": [
           "Angular",
@@ -136,9 +136,9 @@
         "name": "Citizen's Services Portal",
         "role": "Full Stack Developer",
         "description": [
-          "The Project provides a digital medium to citizens in need to access government services.",
-          "A react component library contains all the unique components and assembled them to create different views and pages.",
-          "The front-end application consists of hundreds of forms which were generated dynamically using json files."
+          "The project offers a digital platform for citizens to access government services.",
+          "A React component library includes reusable components, which are assembled to create various views and pages.",
+          "The front-end application features hundreds of forms, dynamically generated from JSON files."
         ],
         "techStack": [
           "React",
@@ -151,9 +151,10 @@
         "name": "Virtual Health Assistant",
         "role": "Full Stack Developer",
         "description": [
-          "App has 3 layers – Client using angular, Socket Service to listen to any incoming request (Socket Layer) and Node Layer at the back which intercepts any requests coming in from the socket and send them to the model which makes actual service call or process data which is then returned to the client for injection.",
-          "We targeted 3 languages with 3 different requirements using the same code base.",
-          "The entire app was configurable using a config file (without rebuilding the app). All data were hosted on a CMS."
+          "The app has 3 layers – Client built with Angular, Socket layer - a service that listens for incoming requests and Node layer which intercepts socket requests, processes data or makes service calls, and returns the results to the client for injection.",
+          "The app supports three languages with different requirements, using a single codebase.",
+          "The entire app is configurable via a config file, allowing changes without rebuilding the app.",
+          "All data is hosted on a CMS."
         ],
         "techStack": [
           "Angular 9",
@@ -167,7 +168,7 @@
   },
   {
     "duration": "2014 – 2016",
-    "designation": "Consultant/Freelance",
+    "designation": "Consultant & Developer",
     "company": "Cretechs",
     "logo": "cretechs.svg",
     "location": "Bangalore, India",
@@ -176,7 +177,8 @@
         "name": "iRelief Medical Services",
         "role": "Full Stack Developer",
         "description": [
-          "iRelief services is an aggregator for healthcare services ranging from ambulance, blood bank, home-care and pharmacy."
+          "iRelief services is an aggregator for healthcare services ranging from ambulance, blood bank, home-care and pharmacy.",
+          ""
         ],
         "techStack": [
           "Python3",

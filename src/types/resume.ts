@@ -1,7 +1,6 @@
 export interface Resume {
   name: string
   highlights: string[]
-  about: string
   email: string
   linkedIn: string
   website: string
