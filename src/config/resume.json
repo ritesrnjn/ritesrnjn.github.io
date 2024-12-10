@@ -10,7 +10,6 @@
     "email": "ritesrnjn@gmail.com",
     "linkedIn": "linkedin.com/in/ritesrnjn",
     "website": "riteshranjan.com",
-    "website_full": "https://ranjanritesh.com",
     "location": "Barcelona, Spain",
     "interests": [
       "Sketching",
@@ -20,6 +19,33 @@
       "Outdoor Activities"
     ]
   },
+  "keyAchievements": [
+    {
+      "icon": "ChartBarIcon",
+      "title": "System Architecture",
+      "desc": "About Illumina project"
+    },
+    {
+      "icon": "LightBulbIcon",
+      "title": "Consulting & Product Development",
+      "desc": "Worked with multiple startups in their early days & launched their first product"
+    },
+    {
+      "icon": "ScissorsIcon",
+      "title": "Cost Optimization",
+      "desc": "Migrated infra-structure of a client from AWS to digitalocean improving the SEO and cutting down the monthly bills by half."
+    },
+    {
+      "icon": "FlagIcon",
+      "title": "Scaled App to 1M+ Users",
+      "desc": "Created an application for a startup and scaled it to 1 million+ users."
+    },
+    {
+      "icon": "AcademicCapIcon",
+      "title": "Student Developer",
+      "desc":  "My final year university project 'DoctorLive', was selected at Microsoft //publish/ 2014 event at Bangalore for National Finals."
+    }
+  ],
   "languages": [
     {
       "name": "Advanced",

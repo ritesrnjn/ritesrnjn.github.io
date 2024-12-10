@@ -1,11 +1,11 @@
-import {Experience, Project as ProjectType} from '@/types/resume'
+import {Experience as ExperienceType, Project as ProjectType} from '@/types/resume'
 import Image from 'next/image'
 
 function Project({project}: { project: ProjectType }) {
   return (
     <div className='mt-3'>
-      <h3 className='text-lg font-light -ml-4'>{project.name}</h3>
-      <ul className='text-gray-500 font-light list-disc'>
+      <h3 className='text-lg text-fuchsia-950 font-light -ml-4'>{project.name}</h3>
+      <ul className='text-gray-800 font-light list-disc'>
         <li>
           {project.description.map((desc, i) => (
             <span key={`${project.name}-${i}`}>{desc}&nbsp;</span>
@@ -17,7 +17,7 @@ function Project({project}: { project: ProjectType }) {
   )
 }
 
-export default function ExperienceSection({exp}: { exp: Experience }) {
+export function Experience({exp}: { exp: ExperienceType }) {
   return (
     <div className='mb-6'>
       <div className='flex'>
@@ -41,6 +41,21 @@ export default function ExperienceSection({exp}: { exp: Experience }) {
           <Project key={project.name} project={project} />
         ))}
       </div>
+    </div>
+  )
+}
+
+export function AddExperience({project}: { project: ProjectType }) {
+  return (
+    <div className='mt-3'>
+      <h3 className='text-lg text-fuchsia-950 font-light'>{project.name}</h3>
+      <ul className='text-gray-800 font-light list-disc ml-4'>
+        {project.description.map((desc, i) => (
+          <li key={`${project.name}-${i}`}>{desc}&nbsp;</li>
+        ))}
+        <li>{project.repo}</li>
+        <li>{project.techStack.join(', ')}</li>
+      </ul>
     </div>
   )
 }

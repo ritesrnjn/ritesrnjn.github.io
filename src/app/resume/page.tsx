@@ -3,15 +3,15 @@ import Link from 'next/link'
 import {AtSymbolIcon, LinkIcon, MapPinIcon, UserIcon} from '@heroicons/react/24/outline'
 import resumeData from '@/config/resume.json'
 import workExperiencesData from '@/config/work_experiences.json'
-import Experience from '@/app/resume/Experience'
+import {Experience, AddExperience} from '@/app/resume/Experience'
 import {
   Details,
   Education as EducationType,
   Resume,
   Experience as ExperienceType,
-  Project as ProjectType
 } from '@/types/resume'
 import {Language, ProgrammingLanguage} from './Levels'
+import KeyAchievement from '@/app/resume/KeyAchievement'
 
 export const metadata: Metadata = {
   title: 'My Resume',
@@ -62,7 +62,9 @@ function RightSection({resume}: { resume: Resume }) {
   return (
     <>
       <Section title='Key Achievements'>
-
+        {resume.keyAchievements.map((achievement) => (
+          <KeyAchievement key={achievement.title} {...achievement}/>
+        ))}
       </Section>
       <Section title='Programing Languages'>
         {resume.programmingLanguages.map(level => (
@@ -70,8 +72,12 @@ function RightSection({resume}: { resume: Resume }) {
         ))}
       </Section>
       <Section title='Skills'>
-        <div className='text-md font-light text-gray-500'>
-          {resume.skills.join(' • ')}
+        <div className='text-lg font-light'>
+          {resume.skills.map((tag, i) => (
+            <div className='inline-flex justify-center items-center' key={tag}>
+              <span className='text-fuchsia-950 border-b-2 my-1.5'>{tag}</span> {i < resume.skills.length - 1 ? (<span>&nbsp;•&nbsp;</span>) : ""}
+            </div>
+          ))}
         </div>
       </Section>
       <Section title='Education'>
@@ -104,12 +110,12 @@ function Section({title, children}: { title: string, children: any }) {
 
 function Intro({details}: { details: Details }) {
   const classes = {
-    item: 'flex items-center text-gray-600 text-lg mr-3',
-    icon: 'size-4 mr-0.5'
+    item: 'flex items-center text-gray-800 text-lg mr-3',
+    icon: 'size-4 mr-0.5 text-gray-800'
   }
 
   return (
-    <div className='mb-6'>
+    <div className='mb-8'>
       <h1 className='font text-5xl text-fuchsia-950 mb-3'>
         {details.name}
       </h1>
@@ -153,21 +159,6 @@ function Education({edu}: { edu: EducationType }) {
         <span className='mr-4'> {edu.duration}</span>
         <span className=''>{edu.location}</span>
       </div>
-    </div>
-  )
-}
-
-function AddExperience({project}: { project: ProjectType }) {
-  return (
-    <div className='mt-3'>
-      <h3 className='text-lg font-light'>{project.name}</h3>
-      <ul className='text-gray-500 font-light list-disc ml-4'>
-        {project.description.map((desc, i) => (
-          <li key={`${project.name}-${i}`}>{desc}&nbsp;</li>
-        ))}
-        <li>{project.repo}</li>
-        <li>{project.techStack.join(', ')}</li>
-      </ul>
     </div>
   )
 }

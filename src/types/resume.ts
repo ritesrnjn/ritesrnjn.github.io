@@ -6,6 +6,13 @@ export interface Resume {
   programmingLanguages: Level[]
   languages: Level[],
   addExperiences: Project[]
+  keyAchievements: KeyAchievement[]
+}
+
+export interface KeyAchievement {
+  icon: string
+  title: string
+  desc: string
 }
 
 export interface Level {
@@ -21,7 +28,6 @@ export interface Details {
   email: string
   linkedIn: string
   website: string
-  website_full: string
   location: string
   interests: string[],
 }
