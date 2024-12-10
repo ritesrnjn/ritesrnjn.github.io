@@ -22,7 +22,7 @@ export function Experience({exp}: { exp: ExperienceType }) {
     <div className='mb-6'>
       <div className='flex'>
         <div>
-          <Image height={48} width={48} src={`/resume/${exp.logo}`} alt={exp.logo}/>
+          <Image height={48} width={48} src={`/img/employers/${exp.logo}`} alt={exp.logo}/>
         </div>
 
         <div className='ml-3'>

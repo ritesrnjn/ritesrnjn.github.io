@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import {ProjectType} from '@/types/project'
+
 export default function Project({details}: { details: ProjectType }) {
 
   return (

@@ -13,11 +13,12 @@
           "Developing an enterprise application to be used withing the organisation."
         ],
         "techStack": [
-          "SAML",
-          "Jenkins",
           "Angular",
+          "Spring Boot",
           "Kafka",
           "Postgres",
+          "SAML",
+          "Jenkins",
           "Allianz Tools"
         ]
       }

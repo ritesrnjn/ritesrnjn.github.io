@@ -1,7 +1,7 @@
 import {Inter} from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import {GoogleAnalytics} from '@next/third-parties/google'
 import React from 'react'
 
 const roboto = Inter({
@@ -21,19 +21,19 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
   return (
     <html lang='en'>
     <head>
-      <link rel='icon' href='/favicon.ico' sizes='any' />
+      <link rel='icon' href='/favicon.ico' sizes='any'/>
       <title> Ritesh&apos;s Blog </title>
     </head>
     <body className={roboto.className}>
     <div className='flex flex-col min-h-screen'>
-      <Header />
+      <Header/>
       <div className='flex flex-col items-center justify-center grow mx-4'>
         {children}
       </div>
     </div>
     </body>
     {process.env.NODE_ENV === 'production' && (
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA4_ID || ''} />
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA4_ID || ''}/>
     )}
     </html>
   )

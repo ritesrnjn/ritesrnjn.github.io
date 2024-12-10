@@ -1,17 +1,12 @@
 import type {Metadata} from 'next'
 import Link from 'next/link'
 import {AtSymbolIcon, LinkIcon, MapPinIcon, UserIcon} from '@heroicons/react/24/outline'
-import resumeData from '@/config/resume.json'
-import workExperiencesData from '@/config/work_experiences.json'
-import {Experience, AddExperience} from '@/app/resume/Experience'
-import {
-  Details,
-  Education as EducationType,
-  Resume,
-  Experience as ExperienceType,
-} from '@/types/resume'
-import {Language, ProgrammingLanguage} from './Levels'
+import {AddExperience, Experience} from '@/app/resume/Experience'
+import {Details, Education as EducationType, Experience as ExperienceType, Resume,} from '@/types/resume'
+import {Language, ProgrammingLanguage} from '@/app/resume/Levels'
 import KeyAchievement from '@/app/resume/KeyAchievement'
+import resumeData from '@/config/resume/main.json'
+import workExperiencesData from '@/config/resume/experiences.json'
 
 export const metadata: Metadata = {
   title: 'My Resume',
