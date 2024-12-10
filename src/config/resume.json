@@ -1,7 +1,11 @@
 {
   "details": {
     "name": "Ritesh Ranjan",
-    "roles": ["Full Stack Developer", "Software Architecture", "UI/UX"],
+    "roles": [
+      "Full Stack Developer",
+      "Software Architecture",
+      "Data Analytics"
+    ],
     "about": "Designer, developer, painter, and overall a pretty nice guy",
     "email": "ritesrnjn@gmail.com",
     "linkedIn": "linkedin.com/in/ritesrnjn",
@@ -18,19 +22,19 @@
   },
   "languages": [
     {
-      "name": "English",
-      "level": "Advanced",
-      "score": 5
+      "name": "Advanced",
+      "score": 5,
+      "items": ["English"]
     },
     {
-      "name": "Hindi",
-      "level": "Native",
-      "score": 5
+      "name": "Native",
+      "score": 5,
+      "items": ["Hindi"]
     },
     {
-      "name": "Spanish",
-      "level": "Beginner",
-      "score": 2
+      "name": "Beginner",
+      "score": 2,
+      "items": ["Spanish"]
     }
   ],
   "summary": "Seasoned full stack developer with 10 years of experience, expert in Web Development.",
@@ -42,102 +46,57 @@
       "location": "Bangalore, India"
     }
   ],
-  "skills": {
-    "title": "Software engineering & web development",
-    "languages": {
-      "title": "Languages",
-      "levels": [
-        {
-          "name": "Advanced",
-          "stars": 4,
-          "languages": [
-            "JavaScript",
-            "PHP",
-            "Python"
-          ]
-        },
-        {
-          "name": "Intermediate",
-          "stars": 3,
-          "languages": [
-            "C#",
-            "C++"
-          ]
-        },
-        {
-          "name": "Beginner",
-          "stars": 1,
-          "languages": [
-            "Rust"
-          ]
-        }
+  "programmingLanguages": [
+    {
+      "name": "Advanced",
+      "score": 4,
+      "items": [
+        "JavaScript",
+        "PHP",
+        "Python"
       ]
     },
-    "web": {
-      "title": "Web",
-      "tech": [
-        [
-          "Django",
-          "Celery",
-          "MySql",
-          "Redis",
-          "SQLite",
-          "PostgreSQL",
-          "Wordpress"
-        ],
-        [
-          "React",
-          "Angular",
-          "Node.js",
-          "jQuery",
-          "Redux",
-          "AngularJS",
-          "Express"
-        ],
-        [
-          "HTML5",
-          "CSS3",
-          "Scss",
-          "TailwindCSS",
-          "Bootstrap",
-          "JSS",
-          "MaterialUI",
-          "Pug"
-        ],
-        [
-          "PHP",
-          "Laravel 5",
-          "Wordpress"
-        ],
-        [
-          "AWS",
-          "GCP",
-          "Heroku",
-          "DigitalOcean"
-        ]
+    {
+      "name": "Intermediate",
+      "score": 3,
+      "items": [
+        "C#",
+        "C++"
       ]
     },
-    "other": {
-      "title": "Other",
-      "tech": [
-        [
-          "GIT",
-          "JIRA",
-          "Gulp",
-          "Webpack",
-          "Balsamiq",
-          "Photoshop"
-        ],
-        [
-          "IntelliJ IDEs",
-          "VSCode",
-          "Sublime Text",
-          "Visual Studio",
-          "Notepad++"
-        ]
+    {
+      "name": "Beginner",
+      "score": 1,
+      "items": [
+        "Rust"
       ]
     }
-  },
+  ],
+  "skills": [
+    "Angular",
+    "React",
+    "NextJS",
+    "Django",
+    "PostgreSQL",
+    "Node.js",
+    "Celery",
+    "MySql",
+    "Redis",
+    "Wordpress",
+    "Laravel",
+    "jQuery",
+    "Express",
+    "HTML",
+    "CSS",
+    "Scss",
+    "TailwindCSS",
+    "Git",
+    "Docker",
+    "DigitalOcean",
+    "GCP",
+    "Jenkins",
+    "AWS"
+  ],
   "addExperiences": [
     {
       "name": "MedicalNEETPG",

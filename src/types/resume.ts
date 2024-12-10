@@ -2,13 +2,16 @@ export interface Resume {
   details: Details
   summary: string
   education: Education[]
-  skills: Skills
-  languages: {
-    name: string
-    level: string
-    score: number
-  }[],
+  skills: string[]
+  programmingLanguages: Level[]
+  languages: Level[],
   addExperiences: Project[]
+}
+
+export interface Level {
+  name?: string
+  score: number
+  items: string[]
 }
 
 export interface Details {
@@ -47,23 +50,7 @@ export interface Education {
   location: string
 }
 
-export interface Skills {
-  title: string
-  languages: {
-    title: string
-    levels: Level[]
-  }
-  web: {
-    title: string
-    tech: string[][]
-  }
-  other: {
-    title: string
-    tech: string[][]
-  }
-}
-
-export interface Level {
+export interface ProgrammingLanguage {
   name: string
   stars: number
   languages: string[]

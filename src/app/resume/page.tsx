@@ -4,7 +4,6 @@ import {AtSymbolIcon, LinkIcon, MapPinIcon, UserIcon} from '@heroicons/react/24/
 import resumeData from '@/config/resume.json'
 import workExperiencesData from '@/config/work_experiences.json'
 import Experience from '@/app/resume/Experience'
-import Skills from '@/app/resume/Skills'
 import {
   Details,
   Education as EducationType,
@@ -12,7 +11,7 @@ import {
   Experience as ExperienceType,
   Project as ProjectType
 } from '@/types/resume'
-import {Language} from './Language'
+import {Language, ProgrammingLanguage} from './Levels'
 
 export const metadata: Metadata = {
   title: 'My Resume',
@@ -25,7 +24,7 @@ export default function ResumePage() {
   return (
     <div className='max-w-screen-xl mx-auto my-12'>
       <Intro details={resume.details}/>
-      <div className='mt-4 mb-6 grid gap-4 grid-cols-1 sm:grid-cols-12'>
+      <div className='mt-4 mb-6 grid gap-6 grid-cols-1 sm:grid-cols-12'>
         <div className='col-span-1 sm:col-span-7'>
           <LeftSection resume={resume}/>
         </div>
@@ -62,17 +61,27 @@ function LeftSection({resume}: { resume: Resume }) {
 function RightSection({resume}: { resume: Resume }) {
   return (
     <>
+      <Section title='Key Achievements'>
+
+      </Section>
+      <Section title='Programing Languages'>
+        {resume.programmingLanguages.map(level => (
+          <ProgrammingLanguage  key={level.name} items={level.items} name={level.name||''} score={level.score} />
+        ))}
+      </Section>
+      <Section title='Skills'>
+        <div className='text-md font-light text-gray-500'>
+          {resume.skills.join(' • ')}
+        </div>
+      </Section>
       <Section title='Education'>
         {resume.education.map((edu) => (
           <Education key={edu.duration} edu={edu}/>
         ))}
       </Section>
-      <Section title='Skills'>
-        <Skills skills={resume.skills}/>
-      </Section>
       <Section title='Languages'>
-        {resume.languages.map(language => (
-          <Language key={language.name} name={language.name} level={language.level} score={language.score} />
+        {resume.languages.map(level => (
+          <Language key={level.name} items={level.items} name={level.name||''} score={level.score} />
         ))}
       </Section>
     </>
