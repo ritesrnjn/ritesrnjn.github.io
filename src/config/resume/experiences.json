@@ -10,7 +10,9 @@
         "role": "Full Stack Developer",
         "name": "Internal Project",
         "description": [
-          "Developing an enterprise application to be used withing the organisation."
+          "Developing an enterprise application for internal use within the organization.",
+          "Features are modular and can be enabled or disabled via configuration.",
+          "The application is configurable to meet the needs of vendors across different European countries."
         ],
         "techStack": [
           "Angular",
@@ -35,9 +37,11 @@
         "role": "Full Stack Developer",
         "name": "Customer Care Backlog Management Tool",
         "description": [
-          "This tool fetches data from SAP HANA using lambda function and stores it in a Postgres DB.",
-          "FE React app displays data in the form of multiple charts and tables.",
-          "The NodeJS app using Prisma ORM serves data through GraphQL APIs."
+          "A cron job periodically fetches data from SAP HANA via a Lambda function and stores it in a PostgreSQL database.",
+          "An Express app with Prisma ORM serves data through a GraphQL API.",
+          "Users are authenticated using Okta SAML and their details are fetched from employee database",
+          "A React web app displays the data and various analytics.",
+          "This application replaced multiple legacy apps and processes across different regions."
         ],
         "techStack": [
           "React",
@@ -66,7 +70,7 @@
         "name": "Ecommerce Application",
         "role": "Full Stack Developer",
         "description": [
-          "An online marketplace for selling life science products."
+          "Implemented an online marketplace for a US based MNC to sell life science products."
         ],
         "techStack": [
           "Angular",
@@ -78,10 +82,10 @@
       },
       {
         "name": "Quoting tool",
-        "role": "Full Stack Developer",
+        "role": "Frontend Developer",
         "description": [
-          "A quote generation tool for consumption-based IT solutions.",
-          "Backend services have been created using SAP Hybris while react has been used in client side."
+          "Created a quote generation tool for consumption-based IT solutions.",
+          "Backend services were developed using SAP Hybris, with React used on the client side."
         ],
         "techStack": [
           "Hybris",
@@ -93,12 +97,14 @@
         "name": "Production Lines Tracker",
         "role": "Full Stack Developer",
         "description": [
-          "A complete IoT solution for end to end monitoring of production lines in manufacturing unit.",
-          "It uses Thingworx IoT platform for receiving data from on-site sensors, processing & storing the collected data and show the required information."
+          "Developed a complete IoT solution for end-to-end monitoring of production lines in a manufacturing unit.",
+          "Utilized the Thingworx IoT platform to collect, process, and store data from on-site sensors, displaying real-time information.",
+          "Integrated React with Thingworx, significantly reducing project development time."
         ],
         "techStack": [
           "Thingworx",
           "React",
+          "jQuery",
           "JSS"
         ]
       },
@@ -106,8 +112,9 @@
         "name": "Dynamic Vehicle Router",
         "role": "Full Stack Developer",
         "description": [
-          "It provides solution for finding optimal path for vehicle visiting multiple locations.",
-          "The application provided features like authentication, customization of various constraints & display the list of generated solutions."
+          "Developed a solution to optimize delivery routes for vehicles visiting multiple stores",
+          "Users can input constraints and receive a list of customized routes.",
+          "The selected route is tracked on a map for the driver to follow."
         ],
         "techStack": [
           "Python",

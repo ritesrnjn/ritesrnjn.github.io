@@ -1,10 +1,11 @@
+import {SocialLinks} from '@/types/details'
 
-export default function Social() {
+export default function Social({links}: {links: SocialLinks}) {
   return (
     <ul className='flex justify-center mt-5 space-x-5'>
 
       <li>
-        <a href='https://stackoverflow.com/users/5922922/ritesrnjn' target='_blank' rel='noreferrer'>
+        <a href={links.stackoverflow} target='_blank' rel='noreferrer'>
           <svg className='fill-gray-400 hover:fill-[#F48024]' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
                width='32' height='32' viewBox='0 0 24 24'>
             <path
@@ -14,7 +15,7 @@ export default function Social() {
       </li>
 
       <li>
-        <a href='http://github.com/ritesrnjn' target='_blank' rel='noreferrer'>
+        <a href={links.github} target='_blank' rel='noreferrer'>
           <svg className='fill-gray-400 hover:fill-[#333333]' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
                width='32' height='32' viewBox='0 0 24 24'>
             <path
@@ -25,7 +26,7 @@ export default function Social() {
       </li>
 
       <li>
-        <a href='mailto: ritesrnjn@gmail.com' target='_blank' rel='noreferrer'>
+        <a href={`mailto: ${links.email}`} target='_blank' rel='noreferrer'>
           <svg className='fill-gray-400 hover:fill-[#e54033]' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
                width='32' height='32' viewBox='0 0 24 24'>
             <path
@@ -36,7 +37,7 @@ export default function Social() {
       </li>
 
       <li>
-        <a href='http://linkedin.com/in/ritesrnjn' target='_blank' rel='noreferrer'>
+        <a href={links.linkedin} target='_blank' rel='noreferrer'>
           <svg className='fill-gray-400 hover:fill-[#0077B5]' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
                width='32' height='32' viewBox='0 0 24 24'>
             <path
@@ -47,7 +48,7 @@ export default function Social() {
       </li>
 
       <li>
-        <a href='http://twitter.com/ritesrnjn' target='_blank' rel='noreferrer'>
+        <a href={links.twitter} target='_blank' rel='noreferrer'>
           <svg className='fill-gray-400 hover:fill-[#1DA1F2]' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'
                width='32' height='32' viewBox='0 0 24 24'>
             <path

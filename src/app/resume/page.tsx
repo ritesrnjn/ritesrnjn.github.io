@@ -2,7 +2,7 @@ import type {Metadata} from 'next'
 import Link from 'next/link'
 import {AtSymbolIcon, LinkIcon, MapPinIcon, UserIcon} from '@heroicons/react/24/outline'
 import {AddExperience, Experience} from '@/app/resume/Experience'
-import {Details, Education as EducationType, Experience as ExperienceType, Resume,} from '@/types/resume'
+import {Education as EducationType, Experience as ExperienceType, Resume,} from '@/types/resume'
 import {Language, ProgrammingLanguage} from '@/app/resume/Levels'
 import KeyAchievement from '@/app/resume/KeyAchievement'
 import resumeData from '@/config/resume/main.json'
@@ -18,7 +18,7 @@ export default function ResumePage() {
 
   return (
     <div className='max-w-screen-xl mx-auto my-12'>
-      <Intro details={resume.details}/>
+      <Intro resume={resume}/>
       <div className='mt-4 mb-6 grid gap-6 grid-cols-1 sm:grid-cols-12'>
         <div className='col-span-1 sm:col-span-7'>
           <LeftSection resume={resume}/>
@@ -37,7 +37,7 @@ function LeftSection({resume}: { resume: Resume }) {
   return (
     <>
       <Section title='Summary'>
-        <p className='mb-2 font-light'>{resume.summary}</p>
+        <p className='mb-2 font-light'>{resume.summary.map(line => `${line} `)}</p>
       </Section>
       <Section title='Experience'>
         {workExperiences.map((exp) => (
@@ -103,7 +103,7 @@ function Section({title, children}: { title: string, children: any }) {
   )
 }
 
-function Intro({details}: { details: Details }) {
+function Intro({resume}: { resume: Resume }) {
   const classes = {
     item: 'flex items-center text-gray-800 text-lg mr-3',
     icon: 'size-4 mr-0.5 text-gray-800'
@@ -112,26 +112,26 @@ function Intro({details}: { details: Details }) {
   return (
     <div className='mb-8'>
       <h1 className='font text-5xl text-fuchsia-950 mb-3'>
-        {details.name}
+        {resume.name}
       </h1>
       <div className='text-2xl text-fuchsia-950 ml-0.5 mb-1'>
-        {details.roles.join(' | ')}
+        {resume.highlights.join(' | ')}
       </div>
       <div className='block sm:flex font-light'>
         <div className={classes.item}>
           <UserIcon className={classes.icon}/>
-          <Link href={`https://${details.website}`} target='_blank'>{details.website}</Link>
+          <Link href={`https://${resume.website}`} target='_blank'>{resume.website}</Link>
         </div>
         <div className={classes.item}>
           <AtSymbolIcon className={classes.icon}/>
-          <Link href={`mailto:${details.email}`} target='_blank'>{details.email}</Link>
+          <Link href={`mailto:${resume.email}`} target='_blank'>{resume.email}</Link>
         </div>
         <div className={classes.item}>
           <LinkIcon className={classes.icon}/>
-          <Link href={`https://${details.linkedIn}`} target='_blank'>{details.linkedIn}</Link>
+          <Link href={`https://${resume.linkedIn}`} target='_blank'>{resume.linkedIn}</Link>
         </div>
         <div className={classes.item}>
-          <MapPinIcon className={classes.icon}/> {details.location}
+          <MapPinIcon className={classes.icon}/> {resume.location}
         </div>
       </div>
     </div>

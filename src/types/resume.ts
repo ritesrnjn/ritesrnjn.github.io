@@ -1,6 +1,13 @@
 export interface Resume {
-  details: Details
-  summary: string
+  name: string
+  highlights: string[]
+  about: string
+  email: string
+  linkedIn: string
+  website: string
+  location: string
+  interests: string[],
+  summary: string[]
   education: Education[]
   skills: string[]
   programmingLanguages: Level[]
@@ -19,17 +26,6 @@ export interface Level {
   name?: string
   score: number
   items: string[]
-}
-
-export interface Details {
-  name: string
-  about: string
-  roles: string[]
-  email: string
-  linkedIn: string
-  website: string
-  location: string
-  interests: string[],
 }
 
 export interface Experience {
