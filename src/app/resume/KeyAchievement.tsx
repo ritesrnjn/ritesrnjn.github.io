@@ -10,7 +10,7 @@ const getIconComponent = (icon: string) => ({
 }[icon])
 
 export default function KeyAchievement({icon, title, desc}: KeyAchievementType) {
-  const IconElement = getIconComponent(icon)
+  const IconElement: any = getIconComponent(icon)
   return (
     <div className='mb-2'>
       <div className='flex items-center text-fuchsia-950'>
