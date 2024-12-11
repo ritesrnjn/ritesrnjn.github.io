@@ -39,7 +39,7 @@
         "description": [
           "A cron job periodically fetches data from SAP HANA via a Lambda function and stores it in a PostgreSQL database.",
           "An Express app with Prisma ORM serves data through a GraphQL API.",
-          "Users are authenticated using Okta SAML and their details are fetched from employee database",
+          "Users are authenticated using Okta SAML and their details are fetched from employee database.",
           "A React web app displays the data and various analytics.",
           "This application replaced multiple legacy apps and processes across different regions."
         ],
@@ -70,7 +70,8 @@
         "name": "Ecommerce Application",
         "role": "Full Stack Developer",
         "description": [
-          "Developed an online marketplace for a US-based MNC specializing in life-science products."
+          "Developed an online marketplace for a US-based MNC specializing in life-science products.",
+          "Integrated CyberSource API for payments and Elastic Path for product searches."
         ],
         "techStack": [
           "Angular",
@@ -112,7 +113,7 @@
         "name": "Dynamic Vehicle Router",
         "role": "Full Stack Developer",
         "description": [
-          "Developed a solution to optimize delivery routes for vehicles visiting multiple stores",
+          "Developed a solution to optimize delivery routes for vehicles visiting multiple stores.",
           "Users can input constraints and receive a list of customized routes.",
           "The selected route is tracked on a map for the driver to follow."
         ],
@@ -177,44 +178,48 @@
         "name": "iRelief Medical Services",
         "role": "Full Stack Developer",
         "description": [
-          "iRelief services is an aggregator for healthcare services ranging from ambulance, blood bank, home-care and pharmacy.",
-          ""
+          "The app allowed users to book ambulance in realtime, find donors & blood banks, book homecare services and order medicines online.",
+          "The solution included APIs, a back-office dashboard, a user website, a driver mobile app, and a user app.",
+          "The driver's mobile app could receive bookings, complete journeys, and generate invoices, similar to Uber.",
+          "Developed the backend in Django, using Celery as the task scheduler, Firebase for real-time database, and GCM for push notifications to mobile apps."
         ],
         "techStack": [
-          "Python3",
           "Django",
           "Celery",
           "Firebase",
           "GCM",
           "Angular 5",
-          "NodeJS"
+          "NodeJS",
+          "Geolocation API"
         ]
       },
       {
         "name": "Mojojo",
         "role": "Full Stack Developer",
+        "description": [
+          "MOJOJO is a marketplace connecting people with salons, spas, tattoo studios & stylists.",
+          "The application includes an AngularJS website, a dashboard, a Laravel backend, and Redis cache.",
+          "It also offers a dashboard for stylists and spas to manage booking calendar."
+        ],
         "techStack": [
-          "PHP",
           "Laravel",
           "AngularJS",
           "MySQL",
           "Redis"
-        ],
-        "description": [
-          "MOJOJO is a marketplace which connects people with Salons, Spas, Tattoo Studios & Stylists. It has a REST based architecture."
         ]
       },
       {
         "name": "Malvern Engineering",
         "role": "Full Stack Developer",
+        "description": [
+          "Created a WordPress website for Malvern Engineering, a company serving the mining industry.",
+          "Developed a custom WordPress plugin that allows users to submit their email addresses while downloading product brochures."
+        ],
         "techStack": [
-          "PHP",
           "Wordpress",
+          "PHP",
           "JavaScript",
           "MySQL"
-        ],
-        "description": [
-          "Malvern Engineering was established in June 1947, as a general engineering shop, servicing the mining industry."
         ]
       }
     ]

@@ -9,13 +9,6 @@
   "linkedIn": "linkedin.com/in/ritesrnjn",
   "website": "riteshranjan.com",
   "location": "Barcelona, Spain",
-  "interests": [
-    "Sketching",
-    "Electronics",
-    "Swimming",
-    "Cycling",
-    "Outdoor Activities"
-  ],
   "summary": [
     "Experienced full stack developer with 10 years in web development, working with multiple startups and MNCs.",
     "Passionate about programming, web and software development since school days.",
@@ -25,17 +18,23 @@
     {
       "name": "Advanced",
       "score": 5,
-      "items": ["English"]
+      "items": [
+        "English"
+      ]
     },
     {
       "name": "Native",
       "score": 5,
-      "items": ["Hindi"]
+      "items": [
+        "Hindi"
+      ]
     },
     {
       "name": "Beginner",
       "score": 2,
-      "items": ["Spanish"]
+      "items": [
+        "Spanish"
+      ]
     }
   ],
   "education": [
@@ -100,13 +99,13 @@
   "keyAchievements": [
     {
       "icon": "PuzzlePieceIcon",
-      "title": "System Architecture",
-      "desc": "About Illumina project"
+      "title": "System Design",
+      "desc": "As the sole developer on the project, created a unified enterprise application based on feedback from multiple teams, replacing their existing apps and processes."
     },
     {
       "icon": "LightBulbIcon",
       "title": "Consulting & Product Development",
-      "desc": "Worked with multiple startups in their early days & launched their first product"
+      "desc": "Worked with multiple startups in their early days & launched their first product."
     },
     {
       "icon": "ScissorsIcon",
@@ -121,54 +120,7 @@
     {
       "icon": "AcademicCapIcon",
       "title": "Student Developer",
-      "desc":  "My final year university project 'DoctorLive', was selected at Microsoft //publish/ 2014 event at Bangalore for National Finals."
-    }
-  ],
-  "addExperiences": [
-    {
-      "name": "MedicalNEETPG",
-      "role": "Principal software developer",
-      "description": [],
-      "techStack": [
-      ]
-    },
-    {
-      "name": "DoctorLive",
-      "role": "Student Developer",
-      "description": [
-        "DoctorLive is my final year college project.",
-        "We aimed to bridge the communication gap between doctors, patients and chemists.",
-        "Patients are provided with a mobile app through which they can book appointments, receive reports, receive health reminders and connect with doctors.",
-        "Doctors & hospitals have an Azure dashboard by which they can send the health reports and connect with patients digitally.",
-        "Chemists receive the list of medicines direcly from hospital and deliver them to patient.",
-        "This project was selected at Microsoft //publish/ 2014 event at Bangalore for National Finals."
-      ],
-      "repo": "https://github.com/ritesrnjn/docLiveWebApp",
-      "techStack": [
-        "Microsoft Azure",
-        "C#",
-        "XAML",
-        "ASP.NET",
-        "SQL Server",
-        "Windows Phone SDK",
-        "Visual Studio"
-      ]
-    },
-    {
-      "name": "API Docs",
-      "role": "",
-      "description": [
-        "API Docs was created to maintain APIs for other projects I was working on.",
-        "This is an alternate to swagger editor to create and store APIs. Instead of writing YAML codes, all I had to do was to fill a simple CRUD form."
-      ],
-      "repo": "https://github.com/ritesrnjn/api_docs",
-      "techStack": [
-        "PHP",
-        "JavaScript",
-        "Bootstrap",
-        "SQLite",
-        "MySQL"
-      ]
+      "desc": "My final year university project 'DoctorLive', was selected at Microsoft //publish/ 2014 event at Bangalore for National Finals."
     }
   ]
 }

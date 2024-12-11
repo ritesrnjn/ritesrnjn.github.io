@@ -1,0 +1,62 @@
+[
+  {
+    "name": "MedicalNEETPG",
+    "role": "Principal software developer",
+    "description": [
+      "The Application allows users to search for post-graduation medical colleges, check updates, and book counseling sessions.",
+      "Frontend: Built using Next.js with support for server-side components.",
+      "Backend: Developed in Django, with PostgreSQL databases.",
+      "The dashboard, built with React, allows admins to update website content and view analytics.",
+      "Blog Posts are fetched using GraphQL from the Wordpress Rest API."
+    ],
+    "techStack": [
+      "React",
+      "NextJS",
+      "Django",
+      "Wordpress",
+      "GraphQL",
+      "Prisma",
+      "PostgreSQL",
+      "DigitalOcean",
+      "RazorPay"
+    ]
+  },
+  {
+    "name": "DoctorLive",
+    "role": "Student Developer",
+    "description": [
+      "DoctorLive was my final year college project aimed at bridging the communication gap between doctors, patients, and chemists.",
+      "Patients: A mobile app allows them to book appointments, receive reports, get health reminders, and connect with doctors.",
+      "Doctors & Hospitals: An Azure-based dashboard enables doctors and hospitals to send health reports and communicate with patients digitally.",
+      "Chemists: Receive a list of medicines directly from hospitals and deliver them to patients.",
+      "The project was selected for the National Finals at the Microsoft //publish/ 2014 event in Bangalore."
+    ],
+    "repo": "https://github.com/ritesrnjn/docLiveWebApp",
+    "techStack": [
+      "Microsoft Azure",
+      "C#",
+      "XAML",
+      "ASP.NET",
+      "SQL Server",
+      "Windows Phone SDK",
+      "Visual Studio"
+    ]
+  },
+  {
+    "name": "API Docs",
+    "role": "Creator",
+    "description": [
+      "Created 'API docs' to manage APIs for other projects I was working on.",
+      "This is an alternate to swagger editor to create and store APIs.",
+      "Instead of writing YAML codes, all I had to do was to fill a simple CRUD form."
+    ],
+    "repo": "https://github.com/ritesrnjn/api_docs",
+    "techStack": [
+      "PHP",
+      "JavaScript",
+      "Bootstrap",
+      "SQLite",
+      "MySQL"
+    ]
+  }
+]

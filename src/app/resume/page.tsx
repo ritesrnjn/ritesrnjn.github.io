@@ -7,6 +7,7 @@ import {Language, ProgrammingLanguage} from '@/app/resume/Levels'
 import KeyAchievement from '@/app/resume/KeyAchievement'
 import resumeData from '@/config/resume/main.json'
 import workExperiencesData from '@/config/resume/experiences.json'
+import addExperiences from '@/config/resume/add_experience.json'
 
 export const metadata: Metadata = {
   title: 'My Resume',
@@ -44,7 +45,7 @@ function LeftSection({resume}: { resume: Resume }) {
         ))}
       </Section>
       <Section title='Additional Experiences'>
-        {resume.addExperiences.map((exp) => (
+        {addExperiences.map((exp) => (
           <AddExperience key={exp.name} project={exp}/>
         ))}
       </Section>

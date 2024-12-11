@@ -6,11 +6,9 @@ function Project({project}: { project: ProjectType }) {
     <div className='mt-3'>
       <h3 className='text-lg text-fuchsia-950 font-light -ml-4'>{project.name}</h3>
       <ul className='text-gray-800 font-light list-disc'>
-        <li>
-          {project.description.map((desc, i) => (
-            <span key={`${project.name}-${i}`}>{desc}&nbsp;</span>
-          ))}
-        </li>
+        {project.description.map((desc, i) => (
+          <li key={`${project.name}-${i}`}>{desc}</li>
+        ))}
         <li>{project.techStack.join(', ')}</li>
       </ul>
     </div>
@@ -38,7 +36,7 @@ export function Experience({exp}: { exp: ExperienceType }) {
       </div>
       <div className='ml-20'>
         {exp.projects?.map((project) => (
-          <Project key={project.name} project={project} />
+          <Project key={project.name} project={project}/>
         ))}
       </div>
     </div>
@@ -53,7 +51,9 @@ export function AddExperience({project}: { project: ProjectType }) {
         {project.description.map((desc, i) => (
           <li key={`${project.name}-${i}`}>{desc}&nbsp;</li>
         ))}
-        <li>{project.repo}</li>
+        {project.repo && (
+          <li>Repo: {project.repo}</li>
+        )}
         <li>{project.techStack.join(', ')}</li>
       </ul>
     </div>

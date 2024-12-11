@@ -5,13 +5,11 @@ export interface Resume {
   linkedIn: string
   website: string
   location: string
-  interests: string[],
   summary: string[]
-  education: Education[]
   skills: string[]
+  education: Education[]
   programmingLanguages: Level[]
   languages: Level[],
-  addExperiences: Project[]
   keyAchievements: KeyAchievement[]
 }
 
@@ -49,10 +47,4 @@ export interface Education {
   degree: string
   institute: string
   location: string
-}
-
-export interface ProgrammingLanguage {
-  name: string
-  stars: number
-  languages: string[]
 }
