@@ -12,7 +12,7 @@ const getIconComponent = (icon: string) => ({
 export default function KeyAchievement({icon, title, desc}: KeyAchievementType) {
   const IconElement: any = getIconComponent(icon)
   return (
-    <div className='mb-2'>
+    <div className='mb-4'>
       <div className='flex items-center text-fuchsia-950'>
         {IconElement && <IconElement icon={icon} className='w-6 h-6 mr-2'/>}
         <div className='text-lg'>{title}</div>
