@@ -9,7 +9,7 @@ export default function ResumeLayout({children}: Readonly<{ children: React.Reac
 
         <div className='text-center'>
           <div className='font-light mt-6 text-gray-400'>
-            last update: March 2024
+            last update: December 2024
             <br/>
             online version: https://ranjanritesh.com/resume
             <br/>
