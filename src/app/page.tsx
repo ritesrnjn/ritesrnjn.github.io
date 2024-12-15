@@ -2,11 +2,9 @@ import Image from 'next/image'
 import Social from '@/components/Social'
 import details from '@/config/landing.json'
 import type {Metadata} from 'next'
+import pageMeta from '@/config/pageMeta.json'
 
-export const metadata: Metadata = {
-  title: 'Ritesh\'s blog ',
-  description: 'Personal Blog'
-}
+export const metadata: Metadata = pageMeta.home
 
 export default function Home() {
   const {name, about} = details
@@ -21,7 +19,7 @@ export default function Home() {
           {name}
         </h4>
 
-        <h6 className='text-lg font-light text-gray-600'>
+        <h6 className='text-lg font-light text-gray-600 italic'>
           {about}
         </h6>
       </div>

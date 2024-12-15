@@ -9,11 +9,6 @@ import resumeData from '@/config/resume/main.json'
 import workExperiencesData from '@/config/resume/experiences.json'
 import addExperiences from '@/config/resume/add_experience.json'
 
-export const metadata: Metadata = {
-  title: 'My Resume',
-  description: 'My Resume'
-}
-
 export default function ResumePage() {
   const resume: Resume = resumeData
 

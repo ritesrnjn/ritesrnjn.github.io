@@ -1,4 +1,7 @@
 import React from 'react'
+import type {Metadata} from 'next'
+import pageMeta from '@/config/pageMeta.json'
+export const metadata: Metadata = pageMeta.resume
 
 export default function ResumeLayout({children}: Readonly<{ children: React.ReactNode }>) {
   return (

@@ -1,11 +1,9 @@
 import Project from './Project';
 import projects from '@/config/projects.json'
 import type {Metadata} from 'next'
+import pageMeta from '@/config/pageMeta.json'
 
-export const metadata: Metadata = {
-  title: 'My Projects',
-  description: 'My Projects'
-}
+export const metadata: Metadata = pageMeta.projects
 
 export default function ProjectsPage() {
   return (
@@ -17,7 +15,6 @@ export default function ProjectsPage() {
       {projects.map((p) => (
         <Project key={p.id} details={p} />
       ))}
-
     </div>
   )
 }

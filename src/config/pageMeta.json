@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Ritesh's blog",
+    "description": "Welcome to my blog"
+  },
+  "projects": {
+    "title": "My Projects",
+    "description": "Some of my works"
+  },
+  "resume": {
+    "title": "My Resume",
+    "description": "Summary of my professional career"
+  }
+}
